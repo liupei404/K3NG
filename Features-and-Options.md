@@ -15,8 +15,8 @@ This document is in process. Feel free to help by copying appropriate contents a
 |[FEATURE_SERIAL_HELP](https://github.com/k3ng/k3ng_cw_keyer/wiki/Feature:-Command-Line-Interface) | keyer_features_and_options.h | show help for command line interface
 |FEATURE_HELL | keyer_features_and_options.h | 
 |FEATURE_PS2_KEYBOARD | keyer_features_and_options.h | Use a PS2 keyboard to send code - Change keyboard layout (non-US) in K3NG_PS2Keyboard.h.  Additional options below.
-|FEATURE_USB_KEYBOARD | keyer_features_and_options.h | Use a USB keyboard to send code - Uncomment three lines in k3ng_keyer.ino (search for note_usb_uncomment_lines)
-|FEATURE_CW_COMPUTER_KEYBOARD | keyer_features_and_options.h | Have an Arduino Due or Leonardo act as a USB HID (Human Interface Device) keyboard and use the paddle to "type" characters on the computer
+|[FEATURE_USB_KEYBOARD](https://github.com/k3ng/k3ng_cw_keyer/wiki/Feature:-Keyboard-Mouse) | keyer_features_and_options.h | Use a USB keyboard to send code - Uncomment three lines in k3ng_keyer.ino (search for note_usb_uncomment_lines)
+|[FEATURE_CW_COMPUTER_KEYBOARD](https://github.com/k3ng/k3ng_cw_keyer/wiki/Feature:-Keyboard-Mouse) | keyer_features_and_options.h | Have an Arduino Due or Leonardo act as a USB HID (Human Interface Device) keyboard and use the paddle to "type" characters on the computer
 |FEATURE_DEAD_OP_WATCHDOG | keyer_features_and_options.h | 
 |FEATURE_AUTOSPACE | keyer_features_and_options.h | 
 |FEATURE_FARNSWORTH | keyer_features_and_options.h | 
@@ -32,7 +32,7 @@ This document is in process. Feel free to help by copying appropriate contents a
 |FEATURE_CMOS_SUPER_KEYER_IAMBIC_B_TIMING | keyer_features_and_options.h | 
 |FEATURE_DIT_DAH_BUFFER_CONTROL | keyer_features_and_options.h | 
 |FEATURE_HI_PRECISION_LOOP_TIMING | keyer_features_and_options.h | 
-|FEATURE_USB_MOUSE | keyer_features_and_options.h | Uncomment three lines in k3ng_keyer.ino (search for note_usb_uncomment_lines)
+|[FEATURE_USB_MOUSE](https://github.com/k3ng/k3ng_cw_keyer/wiki/Feature:-Keyboard-Mouse) | keyer_features_and_options.h | Uncomment three lines in k3ng_keyer.ino (search for note_usb_uncomment_lines)
 |FEATURE_CAPACITIVE_PADDLE_PINS | keyer_features_and_options.h | remove the bypass capacitors on the paddle_left and paddle_right lines when using capactive paddles
 |FEATURE_LED_RING | keyer_features_and_options.h | Mayhew Labs Led Ring support for rotary encoder
 |FEATURE_ALPHABET_SEND_PRACTICE | keyer_features_and_options.h | enables command mode S command - created by Ryan, KC2ZWM
@@ -77,12 +77,12 @@ This document is in process. Feel free to help by copying appropriate contents a
 |OPTION_UNKNOWN_CHARACTER_ERROR_TONE | keyer_features_and_options.h | Play a tone when an unknown character is entered, aka you messed up so bad the keyer hasn't a clue :-)
 |OPTION_DO_NOT_SAY_HI | keyer_features_and_options.h | 
 |OPTION_USE_ORIGINAL_VERSION_2_1_PS2KEYBOARD_LIB | keyer_features_and_options.h | 
-|OPTION_PS2_NON_ENGLISH_CHAR_LCD_DISPLAY_SUPPORT | keyer_features_and_options.h | makes some non-English characters from the PS2 keyboard display correctly in the LCD display (donated by Marcin sp5iou)
-|OPTION_PS2_KEYBOARD_RESET | keyer_features_and_options.h | reset the PS2 keyboard upon startup with 0xFF (contributed by Bill, W9BEL)
+|[OPTION_PS2_NON_ENGLISH_CHAR_LCD_DISPLAY_SUPPORT](https://github.com/k3ng/k3ng_cw_keyer/wiki/Feature:-Keyboard-Mouse) | keyer_features_and_options.h | makes some non-English characters from the PS2 keyboard display correctly in the LCD display (donated by Marcin sp5iou)
+|[OPTION_PS2_KEYBOARD_RESET](https://github.com/k3ng/k3ng_cw_keyer/wiki/Feature:-Keyboard-Mouse) | keyer_features_and_options.h | reset the PS2 keyboard upon startup with 0xFF (contributed by Bill, W9BEL)
 |OPTION_SAVE_MEMORY_NANOKEYER | keyer_features_and_options.h | 
-|OPTION_CW_KEYBOARD_CAPSLOCK_BEEP
-|OPTION_CW_KEYBOARD_ITALIAN | keyer_features_and_options.h | 
-|OPTION_CW_DECODER_GOERTZEL_AUDIO_DETECTOR
+|[OPTION_CW_KEYBOARD_CAPSLOCK_BEEP](https://github.com/k3ng/k3ng_cw_keyer/wiki/Feature:-Keyboard-Mouse)| keyer_features_and_options.h | 
+|[OPTION_CW_KEYBOARD_ITALIAN](https://github.com/k3ng/k3ng_cw_keyer/wiki/Feature:-Keyboard-Mouse) | keyer_features_and_options.h | 
+|OPTION_CW_DECODER_GOERTZEL_AUDIO_DETECTOR| keyer_features_and_options.h | 
 |OPTION_INVERT_PADDLE_PIN_LOGIC | keyer_features_and_options.h | 
 |[OPTION_ADVANCED_SPEED_DISPLAY](https://github.com/k3ng/k3ng_cw_keyer/wiki/Feature:-Display) | keyer_features_and_options.h | enables "nerd" speed visualization on display: wpm, cpm (char per min), duration of dit and dah in milliseconds and ratio (contributed by Giorgio, IZ2XBZ)
 |OPTION_DIT_DAH_BUFFERS_OFF_BY_DEFAULT _FOR_FEATURE_DIT_DAH_BUFFER_CONTROL | keyer_features_and_options.h | 
