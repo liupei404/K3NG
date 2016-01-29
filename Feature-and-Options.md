@@ -11,7 +11,7 @@ There are several features that can be turned on and options that can be used to
 |FEATURE_BEACON | keyer_features_and_options.h | 
 |FEATURE_CALLSIGN_RECEIVE_PRACTICE | keyer_features_and_options.h | 
 |FEATURE_POTENTIOMETER | keyer_features_and_options.h | Speed control, if enabled, must have pot connected or false wpm will trigger changes randomly
-|FEATURE_SERIAL_HELP | show help for command line interface
+|FEATURE_SERIAL_HELP  | keyer_features_and_options.h | show help for command line interface
 |FEATURE_HELL | keyer_features_and_options.h | 
 |FEATURE_PS2_KEYBOARD | keyer_features_and_options.h | Use a PS2 keyboard to send code - Change keyboard layout (non-US) in K3NG_PS2Keyboard.h.  Additional options below.
 |FEATURE_USB_KEYBOARD | keyer_features_and_options.h | Use a USB keyboard to send code - Uncomment three lines in k3ng_keyer.ino (search for note_usb_uncomment_lines)
@@ -84,6 +84,6 @@ There are several features that can be turned on and options that can be used to
 |OPTION_CW_DECODER_GOERTZEL_AUDIO_DETECTOR
 |OPTION_INVERT_PADDLE_PIN_LOGIC | keyer_features_and_options.h | 
 |OPTION_ADVANCED_SPEED_DISPLAY | keyer_features_and_options.h | enables "nerd" speed visualization on display: wpm, cpm (char per min), duration of dit and dah in milliseconds and ratio (contributed by Giorgio, IZ2XBZ)
-|OPTION_DIT_DAH_BUFFERS_OFF_BY_DEFAULT_FOR_FEATURE_DIT_DAH_BUFFER_CONTROL | keyer_features_and_options.h | 
+|OPTION_DIT_DAH_BUFFERS_OFF_BY_DEFAULT _FOR_FEATURE_DIT_DAH_BUFFER_CONTROL | keyer_features_and_options.h | 
 |OPTION_PROSIGN_SUPPORT | keyer_features_and_options.h | additional prosign support for paddle and straight key echo on display, CLI, and in memory storage
 |OPTION_RUSSIAN_LANGUAGE_SEND_CLI | keyer_features_and_options.h | Russian language CLI sending support (contributed by Павел Бирюков, UA1AQC)
