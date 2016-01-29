@@ -1,5 +1,6 @@
 There are several features that can be turned on and options that can be used to enhance your k3ng keyer. Below are the lines. To enable, they must be uncommented by removing the // at the beginning of the line.
 
+This document is in process. Feel free to help by copying appropriate contents at [the blog](http://blog.radioartisan.com/arduino-cw-keyer/) into a new page and link the appropriate feature to it.
 
 | Features | Location | Notes |
 | ---- |:----:|:---------------|
