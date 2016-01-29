@@ -7,6 +7,7 @@ A common PS2 or USB PC keyboard can be interfaced with the keyer to create a com
 1.  Download the modified PS2Keyboard library files from GitHub K3NG_PS2Keyboard.h and K3NG_PS2Keyboard.cpp).  Create a directory in your sketchbook library directory called K3NG_PS2Keyboard (i.e. \Arduino Sketchbook\libraries\K3NG_PS2Keyboard\)and place the two files in there.
 
 2.  Uncomment the following line in the K3NG Arduino Keyer code:
+.
 
     #define FEATURE_PS2_KEYBOARD PS2
 
@@ -15,6 +16,7 @@ A common PS2 or USB PC keyboard can be interfaced with the keyer to create a com
 Note that the PS2 keyboard data line can be relocated to other pins if desired, but the keyboard clock line must remain at pin 3 as that pin has special functionality for interrupt operation which is required by the PS2 keyboard library code.
 
 4.  If you are using an international non-US keyboard, keyboard mappings can be chosen in K3NG_PS2Keyboard.h:
+.
 
     #define OPTION_PS2_KEYBOARD_US
     #define OPTION_PS2_KEYBOARD_GERMAN
@@ -27,11 +29,11 @@ The French and German keyboard mappings may not be 100% correct and may need som
 1. Download the Circuits@Home library on Github.  Install the library in a new directory in your Sketchbook libraries directory called USB_Host_Shield_20.
 
 2. In k3ng_keyer.ino, uncomment this:
-
+.
     #define FEATURE_USB_KEYBOARD
 
 3. Uncomment these lines in k3ng_keyer.h:
-
+.
     #include <hidboot.h>
     #include <usbhub.h>
     #include <Usb.h>
