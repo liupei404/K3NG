@@ -7,12 +7,12 @@ This document is in process. Feel free to help by copying appropriate contents a
 |[FEATURE_COMMAND_BUTTONS](https://github.com/k3ng/k3ng_cw_keyer/wiki/Feature:-Command-Buttons) | keyer_features_and_options.h | Enable command buttons 
 |[FEATURE_COMMAND_LINE_INTERFACE](https://github.com/k3ng/k3ng_cw_keyer/wiki/Feature:-Command-Line-Interface) | keyer_features_and_options.h | Enable command line interface over serial connection
 |[FEATURE_MEMORIES](https://github.com/k3ng/k3ng_cw_keyer/wiki/Feature:-Memory) | keyer_features_and_options.h | on the Arduino Due, you must have FEATURE_EEPROM_E24C1024 and E24C1024 EEPROM hardware in order to compile this
-|FEATURE_MEMORY_MACROS | keyer_features_and_options.h | 
+|[FEATURE_MEMORY_MACROS](https://github.com/k3ng/k3ng_cw_keyer/wiki/Feature:-Memory) | keyer_features_and_options.h | 
 |FEATURE_WINKEY_EMULATION | keyer_features_and_options.h | 
 |FEATURE_BEACON | keyer_features_and_options.h | 
 |FEATURE_CALLSIGN_RECEIVE_PRACTICE | keyer_features_and_options.h | 
 |FEATURE_POTENTIOMETER | keyer_features_and_options.h | Speed control, if enabled, must have pot connected or false wpm will trigger changes randomly
-|FEATURE_SERIAL_HELP  | keyer_features_and_options.h | show help for command line interface
+|[FEATURE_SERIAL_HELP](https://github.com/k3ng/k3ng_cw_keyer/wiki/Feature:-Command-Line-Interface) | keyer_features_and_options.h | show help for command line interface
 |FEATURE_HELL | keyer_features_and_options.h | 
 |FEATURE_PS2_KEYBOARD | keyer_features_and_options.h | Use a PS2 keyboard to send code - Change keyboard layout (non-US) in K3NG_PS2Keyboard.h.  Additional options below.
 |FEATURE_USB_KEYBOARD | keyer_features_and_options.h | Use a USB keyboard to send code - Uncomment three lines in k3ng_keyer.ino (search for note_usb_uncomment_lines)
@@ -43,7 +43,7 @@ This document is in process. Feel free to help by copying appropriate contents a
 |FEATURE_DYNAMIC_DAH_TO_DIT_RATIO | keyer_features_and_options.h | 
 |FEATURE_PADDLE_ECHO | keyer_features_and_options.h | 
 |FEATURE_STRAIGHT_KEY_ECHO | keyer_features_and_options.h | 
-|FEATURE_COMMAND_LINE_INTERFACE_ON_SECONDARY_PORT | keyer_features_and_options.h | Activate the Command Line interface on the secondary serial port
+|[FEATURE_COMMAND_LINE_INTERFACE_ON_SECONDARY_PORT](https://github.com/k3ng/k3ng_cw_keyer/wiki/Feature:-Command-Line-Interface) | keyer_features_and_options.h | Activate the Command Line interface on the secondary serial port
 |FEATURE_COMPETITION_COMPRESSION_DETECTION | keyer_features_and_options.h | **Experimental**
 
 
