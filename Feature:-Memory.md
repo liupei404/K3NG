@@ -47,3 +47,7 @@ The number of memories is set at compile time using these lines in keyer_setting
 Up to 12 memories can be configured, with some caveats.  Nine memories are supported in the CLI and in memory macros, and the full 12 are supported with the PS2 keyboard.
 
 Memory_area_start and memory_area_end define the starting and ending EEPROM locations for the entire bank of memory.  The memory area is divided up evenly between the memories.  The example settings above will result in 12 memories each with 83 bytes, or 83 characters.
+
+## EEPROM / NonVolatile Settings
+
+Most settings are stored in non-volatile EEPROM memory.  Memory macros which alter the CW speed are not stored to EEPROM as to avoid “wearing out” EEPROM locations, especially in beacon mode.
