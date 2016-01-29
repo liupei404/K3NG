@@ -1,7 +1,8 @@
 There are several features that can be turned on and options that can be used to enhance your k3ng keyer. Below are the lines. To enable, they must be uncommented by removing the // at the beginning of the line.
 
-| Feature Variable | location | Notes |
-| ------------- |:-------------:|:-----|
+
+| Features | Location | Notes |
+| ---- |:----:|:---------------|
 |FEATURE_COMMAND_BUTTONS | keyer_features_and_options.h | Enable command buttons 
 |FEATURE_COMMAND_LINE_INTERFACE | keyer_features_and_options.h | Enable command line interface over serial connection
 |FEATURE_MEMORIES | keyer_features_and_options.h | on the Arduino Due, you must have FEATURE_EEPROM_E24C1024 and E24C1024 EEPROM hardware in order to compile this
@@ -45,8 +46,8 @@ There are several features that can be turned on and options that can be used to
 |FEATURE_COMPETITION_COMPRESSION_DETECTION | keyer_features_and_options.h | **Experimental**
 
 
-| Option Variable | location | Notes |
-| ------------- |:-------------:|:-----|
+| Options | Location | Notes |
+| --- |:-------:|:----------------|
 |OPTION_PRIMARY_SERIAL_PORT_DEFAULT_WINKEY_EMULATION |keyer_features_and_options.h | Use when activating both FEATURE_WINKEY_EMULATION and FEATURE_COMMAND_LINE_INTERFACE 
 |OPTION_SUPPRESS_SERIAL_BOOT_MSG | keyer_features_and_options.h | 
 |OPTION_INCLUDE_PTT_TAIL_FOR_MANUAL_SENDING | keyer_features_and_options.h | 
