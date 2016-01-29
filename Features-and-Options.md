@@ -14,7 +14,7 @@ This document is in process. Feel free to help by copying appropriate contents a
 |FEATURE_POTENTIOMETER | keyer_features_and_options.h | Speed control, if enabled, must have pot connected or false wpm will trigger changes randomly
 |[FEATURE_SERIAL_HELP](https://github.com/k3ng/k3ng_cw_keyer/wiki/Feature:-Command-Line-Interface) | keyer_features_and_options.h | show help for command line interface
 |FEATURE_HELL | keyer_features_and_options.h | 
-|FEATURE_PS2_KEYBOARD | keyer_features_and_options.h | Use a PS2 keyboard to send code - Change keyboard layout (non-US) in K3NG_PS2Keyboard.h.  Additional options below.
+|[FEATURE_PS2_KEYBOARD| keyer_features_and_options.h |  | keyer_features_and_options.h | Use a PS2 keyboard to send code - Change keyboard layout (non-US) in K3NG_PS2Keyboard.h.  Additional options below.
 |[FEATURE_USB_KEYBOARD](https://github.com/k3ng/k3ng_cw_keyer/wiki/Feature:-Keyboard-Mouse) | keyer_features_and_options.h | Use a USB keyboard to send code - Uncomment three lines in k3ng_keyer.ino (search for note_usb_uncomment_lines)
 |[FEATURE_CW_COMPUTER_KEYBOARD](https://github.com/k3ng/k3ng_cw_keyer/wiki/Feature:-Keyboard-Mouse) | keyer_features_and_options.h | Have an Arduino Due or Leonardo act as a USB HID (Human Interface Device) keyboard and use the paddle to "type" characters on the computer
 |FEATURE_DEAD_OP_WATCHDOG | keyer_features_and_options.h | 
