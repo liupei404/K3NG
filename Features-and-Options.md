@@ -21,11 +21,11 @@ This document is in process. Feel free to help by copying appropriate contents a
 |FEATURE_AUTOSPACE | keyer_features_and_options.h | 
 |FEATURE_FARNSWORTH | keyer_features_and_options.h | 
 |FEATURE_DL2SBA_BANKSWITCH | keyer_features_and_options.h | Switch memory banks feature as described here: http://dl2sba.com/index.php?option=com_content&view=article&id=131:nanokeyer&catid=15:shack&Itemid=27#english
-|FEATURE_LCD_4BIT | keyer_features_and_options.h | classic LCD disidefplay using 4 I/O lines
-|FEATURE_LCD_ADAFRUIT_I2C | keyer_features_and_options.h | Adafruit I2C LCD display using MCP23017 at addr 0x20
-|FEATURE_LCD_ADAFRUIT_BACKPACK | keyer_features_and_options.h | Adafruit I2C LCD Backup using MCP23008
-|FEATURE_LCD_YDv1 | keyer_features_and_options.h | YourDuino I2C LCD display with old LCM 1602 V1 ic
-|FEATURE_LCD1602_N07DH | keyer_features_and_options.h | http://linksprite.com/wiki/index.php5?title=16_X_2_LCD_Keypad_Shield_for_Arduino
+|[FEATURE_LCD_4BIT](https://github.com/k3ng/k3ng_cw_keyer/wiki/Feature:-Display) | keyer_features_and_options.h | classic LCD disidefplay using 4 I/O lines
+|[FEATURE_LCD_ADAFRUIT_I2C](https://github.com/k3ng/k3ng_cw_keyer/wiki/Feature:-Display) | keyer_features_and_options.h | Adafruit I2C LCD display using MCP23017 at addr 0x20
+|[FEATURE_LCD_ADAFRUIT_BACKPACK](https://github.com/k3ng/k3ng_cw_keyer/wiki/Feature:-Display) | keyer_features_and_options.h | Adafruit I2C LCD Backup using MCP23008
+|[FEATURE_LCD_YDv1](https://github.com/k3ng/k3ng_cw_keyer/wiki/Feature:-Display) | keyer_features_and_options.h | YourDuino I2C LCD display with old LCM 1602 V1 ic
+|[FEATURE_LCD1602_N07DH](https://github.com/k3ng/k3ng_cw_keyer/wiki/Feature:-Display) | keyer_features_and_options.h | http://linksprite.com/wiki/index.php5?title=16_X_2_LCD_Keypad_Shield_for_Arduino
 |FEATURE_CW_DECODER | keyer_features_and_options.h | Decode CW into the keyer
 |FEATURE_SLEEP | keyer_features_and_options.h | go to sleep after x minutes to conserve battery power (not compatible with Arduino DUE, may have mixed results with Mega and Mega ADK)
 |FEATURE_ROTARY_ENCODER | keyer_features_and_options.h | Use a rotary encoder for speed control
@@ -84,7 +84,7 @@ This document is in process. Feel free to help by copying appropriate contents a
 |OPTION_CW_KEYBOARD_ITALIAN | keyer_features_and_options.h | 
 |OPTION_CW_DECODER_GOERTZEL_AUDIO_DETECTOR
 |OPTION_INVERT_PADDLE_PIN_LOGIC | keyer_features_and_options.h | 
-|OPTION_ADVANCED_SPEED_DISPLAY | keyer_features_and_options.h | enables "nerd" speed visualization on display: wpm, cpm (char per min), duration of dit and dah in milliseconds and ratio (contributed by Giorgio, IZ2XBZ)
+|[OPTION_ADVANCED_SPEED_DISPLAY](https://github.com/k3ng/k3ng_cw_keyer/wiki/Feature:-Display) | keyer_features_and_options.h | enables "nerd" speed visualization on display: wpm, cpm (char per min), duration of dit and dah in milliseconds and ratio (contributed by Giorgio, IZ2XBZ)
 |OPTION_DIT_DAH_BUFFERS_OFF_BY_DEFAULT _FOR_FEATURE_DIT_DAH_BUFFER_CONTROL | keyer_features_and_options.h | 
 |OPTION_PROSIGN_SUPPORT | keyer_features_and_options.h | additional prosign support for paddle and straight key echo on display, CLI, and in memory storage
 |OPTION_RUSSIAN_LANGUAGE_SEND_CLI | keyer_features_and_options.h | Russian language CLI sending support (contributed by Павел Бирюков, UA1AQC)
