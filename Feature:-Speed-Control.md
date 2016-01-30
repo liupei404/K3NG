@@ -35,3 +35,20 @@ The pins for connecting the encoder are defined in these lines in keyer_pin_sett
     #define rotary_pin2 0 // CCW Encoder Pin
 
 The center pin of the rotary encoder should be connected to ground.
+
+### Mayhew Labs LED Ring
+
+To use the [Mayhew Labs Rotary Encode LED Ring](http://mayhewlabs.com/products/rotary-encoder-led-ring) with the rotary encoder speed functionality, uncomment this feature line:
+
+    #define FEATURE_LED_RING
+
+…and define pins here:
+
+    #define led_ring_sdi 0 //Data
+    #define led_ring_clk 0 //Clock
+    #define led_ring_le 0 //Latch
+
+You can adjust the behavior of the LEDs with these settings:
+
+    #define led_ring_low_limit 10
+    #define led_ring_high_limit 50
