@@ -23,6 +23,8 @@ The pin the potentiometer wiper is connected to is defined in this line in keyer
 
 Only enable this functionality if you have a potentiometer connnected, otherwise stray voltage on the Arduino pin will cause erratic and unexpected speed changes.
 
+You can enable and disable this feature in the command line using the \v command.
+
 ## Rotary Encoder Speed Control
 
 Speed can also be controlled using an inexpensive rotary encoder.  The functionality is enabled by uncommenting this line in keyer_features_and_options.h:
