@@ -63,7 +63,7 @@ The K3NG Keyer has been feature in the following videos.
 
 ## Building
 Check the following pages for information on constructing your own keyer.
-* [Schematics](https://github.com/k3ng/k3ng_cw_keyer/wiki/Schematic)
+* [Schematics](https://github.com/k3ng/k3ng_cw_keyer/wiki/Build:-Schematic)
 * [Wiring Instructions](https://github.com/k3ng/k3ng_cw_keyer/wiki/Wiring-the-Keyer)
 * [Configuring the Software](https://github.com/k3ng/k3ng_cw_keyer/wiki/Configuring-Your-Keyer)
 
