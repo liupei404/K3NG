@@ -23,7 +23,12 @@ The pin the potentiometer wiper is connected to is defined in this line in keyer
 
 Only enable this functionality if you have a potentiometer connnected, otherwise stray voltage on the Arduino pin will cause erratic and unexpected speed changes.
 
-You can enable and disable this feature in the command line using the \v command.
+You can enable or disable this feature in the command line using the \v command.
+
+If you wish to adjust the range of the speeds available through the pot, find initial_pot_wpm_low_value and initial_pot_wpm_high_value in [keyer_settings.h](https://github.com/k3ng/k3ng_cw_keyer/blob/master/keyer_settings.h). The defaults are a low of 13 and a high of 35.
+
+    #define initial_pot_wpm_low_value 13     // Potentiometer WPM fully CCW
+    #define initial_pot_wpm_high_value 35    // Potentiometer WPM fully CW
 
 ## Rotary Encoder Speed Control
 
