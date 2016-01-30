@@ -363,9 +363,9 @@ If external tone decoding hardware is used, cw_decoder_pin is a straight digital
 
 ### DSP Audio Tone Decoder
 
-To activate the audio tone decoder in software, activate OPTION_CW_DECODER_GOERTZEL_AUDIO_DETECTOR. This option compiles in a Goertzel DSP audio detector.  The code used in the CW keyer was originally written by Hjalmar skovholm Hansen, OZ1JHM  and is described further on his project web page.  When using this option cw_decoder_pin must be an analog pin, such as A1, A2, A3, etc.
+To activate the audio tone decoder in software, activate OPTION_CW_DECODER_GOERTZEL_AUDIO_DETECTOR. This option compiles in a [Goertzel DSP](http://en.wikipedia.org/wiki/Goertzel_algorithm) audio detector.  The code used in the CW keyer was originally written by Hjalmar skovholm Hansen, OZ1JHM  and is described further on [his project web page](http://www.skovholm.com/cwdecoder).  When using this option cw_decoder_pin must be an analog pin, such as A1, A2, A3, etc.
 
-The DSP audio tone decoder requires two library files: goertzel.h and goertzel.cpp.  Goertzel.h contains several settings:
+The DSP audio tone decoder requires two library files: [goertzel.h](https://github.com/k3ng/k3ng_cw_keyer/blob/master/libraries/goertzel.h) and [goertzel.cpp](https://github.com/k3ng/k3ng_cw_keyer/blob/master/libraries/goertzel.cpp).  Goertzel.h contains several settings:
 
     #define GOERTZ_SAMPLING_FREQ 8928.0
     #define GOERTZ_NOISE_BLANKER_INITIAL_MS 6
@@ -383,7 +383,7 @@ The Arduino Due has an 84 Mhz clock, so the sampling frequency will be different
     #define GOERTZ_SAMPLING_FREQ 46872.0
     #define GOERTZ_SAMPLES 168
 
-To interface the audio with the Arduino, consult Hjalmar’s project page for the circuit.  It’s very simple.  A 10k ohm resistor goes from +5V to the analog pin, and a 10k ohm resistor is placed from the analog pin to ground.  This biases the analog pin at +2.5 volts.  The audio is coupled to the analog pin via a 0.1 uF capacitor.
+To interface the audio with the Arduino, consult [Hjalmar’s project page](http://www.skovholm.com/cwdecoder) for the circuit.  It’s very simple.  A 10k ohm resistor goes from +5V to the analog pin, and a 10k ohm resistor is placed from the analog pin to ground.  This biases the analog pin at +2.5 volts.  The audio is coupled to the analog pin via a 0.1 uF capacitor.
 
 As far as tuning in signals, I have found that the DSP decoders better when receiver filters are wide.  It’s counterintuitive, but narrow CW filters seem to make the DSP decoding not perform as well.  Also, the optimal audio level appears to be just slightly above the threshold where tone detection occurs.  An LED using the cw_decoder_indicator output pin is very helpful in determining this point.
 
@@ -424,7 +424,7 @@ To summarize some configuration combinations:
 
 To compile the code for the Arduino Due, uncomment HARDWARE_ARDUINO_DUE in keyer_hardware.h.
 
-The Due does not have EEPROM memory like the other Arduino boards.  So either you must run the code without EEPROM functionality, or install an external EEPROM.  Support for the E24C1024 EEPROM is available; compile in FEATURE_EEPROM_E24C1024.  If you do not install external EEPROM hardware, you cannot compile in FEATURE_MEMORIES and all settings will be volatile (they will not survive a reboot).  You will also notice that the keyer does the beep-boop-beep-boop-beep-boop at power up to indicate that it is initializing with “factory” settings.  This is because there is no EEPROM to pull settings from and the code thinks it is being booted up for the first time.
+The Due does not have EEPROM memory like the other Arduino boards.  So either you must run the code without EEPROM functionality, or install an external EEPROM.  Support for the [E24C1024 EEPROM](http://www.mouser.com/Search/ProductDetail.aspx?R=CAT24C256LI-Gvirtualkey69800000virtualkey698-CAT24C256LI-G) is available; compile in FEATURE_EEPROM_E24C1024.  If you do not install external EEPROM hardware, you cannot compile in FEATURE_MEMORIES and all settings will be volatile (they will not survive a reboot).  You will also notice that the keyer does the beep-boop-beep-boop-beep-boop at power up to indicate that it is initializing with “factory” settings.  This is because there is no EEPROM to pull settings from and the code thinks it is being booted up for the first time.
 
 ## Code Compilation
 
