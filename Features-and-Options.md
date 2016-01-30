@@ -65,7 +65,7 @@ This document is in process. Feel free to help by copying appropriate contents a
 |[OPTION_WINKEY_FREQUENT_STATUS_REPORT](https://github.com/k3ng/k3ng_cw_keyer/wiki/Feature:-Winkey) | keyer_features_and_options.h | activate this to make Winkey emulation play better with RUMlog and RUMped
 |[OPTION_WINKEY_IGNORE_LOWERCASE](https://github.com/k3ng/k3ng_cw_keyer/wiki/Feature:-Winkey) | keyer_features_and_options.h | Enable for typical K1EL Winkeyer behavior (use for SkookumLogger version 1.10.14 and prior to workaround "r" bug)
 |OPTION_REVERSE_BUTTON_ORDER | keyer_features_and_options.h | This is mainly for the DJ0MY NanoKeyer http://nanokeyer.wordpress.com/
-|OPTION_PROG_MEM_TRIM_TRAILING_SPACES | keyer_features_and_options.h | trim trailing spaces from memory when programming in command mode
+|[OPTION_PROG_MEM_TRIM_TRAILING_SPACES](https://github.com/k3ng/k3ng_cw_keyer/wiki/Feature:-Command-Mode) | keyer_features_and_options.h | trim trailing spaces from memory when programming in command mode
 |OPTION_DIT_PADDLE_NO_SEND_ON_MEM_RPT | keyer_features_and_options.h | this makes dit paddle memory interruption a little smoother
 |OPTION_MORE_DISPLAY_MSGS | keyer_features_and_options.h | additional optional display messages - comment out to save memory
 |[OPTION_N1MM_WINKEY_TAB_BUG_WORKAROUND](https://github.com/k3ng/k3ng_cw_keyer/wiki/Feature:-Winkey) | keyer_features_and_options.h | enable this to ignore the TAB key in the Send CW window (this breaks SO2R functionality in N1MM)
