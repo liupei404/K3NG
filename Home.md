@@ -14,7 +14,7 @@ A circuit board and parts kits called the [nanoKeyer](http://nanokeyer.wordpress
 * [USB or PS2 Keyboard Interface](https://github.com/k3ng/k3ng_cw_keyer/wiki/Feature:-Keyboard-&-Mouse#ps2--usb-keyboard-interface) for CW keyboard operation without a computer
 * Logging and Contest Program Interfacing via K1EL Winkey 1.0 and 2.0 interface protocol emulation
 * Optional PTT outputs with configurable lead, tail, and hang times
-* Optional LCD Display – [Classic 4 bit mode](http://arduino.cc/en/Tutorial/LiquidCrystal) , [Adafruit I2C RGB](http://ladyada.net/make/rgblcdshield/) display and [I2C Character Backpack](https://www.adafruit.com/product/292) or YourDuino I2C LCD Display
+* Optional LCD Display – [Classic 4 bit mode](http://arduino.cc/en/Tutorial/LiquidCrystal) , [Adafruit I2C RGB](http://ladyada.net/make/rgblcdshield/) display and [I2C Character Backpack](https://www.adafruit.com/product/292) or [YourDuino I2C LCD Display](http://arduino-info.wikispaces.com/LCD-Blue-I2C)
 * Up to 12 memories with macros
 * Serial numbers
 * CW keyboard (via a terminal server program like Putty or the Arduino Serial program)
