@@ -52,3 +52,5 @@ Commands are preceded with a backslash (” \ “), the key above your Enter key
     \- Toggle dah buffer on/off
     \: CW send echo inhibit toggle
     \{ QLF mode on/off
+
+![K3ng keyer CLI](http://radioartisan.files.wordpress.com/2011/03/k3ng-keyer-command-line-interface.png)
