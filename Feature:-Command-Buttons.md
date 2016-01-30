@@ -1,6 +1,6 @@
 # Command Buttons
 ## Hardware Setup
-The command buttons are multiplexed; a series of buttons separated by a resistor each so that they can share a single pin. The software will detect the resistance and determine which button was pushed. You must use the same value of resistor between each button. On the [schematic](https://github.com/k3ng/k3ng_cw_keyer/wiki/Schematic) these are labeled R8-R12 and are 1k by default. R7 is a resistor with a default value of 10k. If you change the value of either of these resistors you much adjust the software.
+The command buttons are multiplexed; a series of buttons separated by a resistor each so that they can share a single pin. The software will detect the resistance and determine which button was pushed. You must use the same value of resistor between each button. On the [schematic](https://github.com/k3ng/k3ng_cw_keyer/wiki/Build:-Schematic) these are labeled R8-R12 and are 1k by default. R7 is a resistor with a default value of 10k. If you change the value of either of these resistors you much adjust the software.
 
 ## Configuring Software
 To enable the command buttons, uncomment this line in keyer_features_and_options.h prior to compiling:
