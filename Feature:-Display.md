@@ -1,6 +1,6 @@
 # LCD Display
 
-This keyer supports an LCD display, either the standard commonplace Hitachi LCD display in four bit mode, the Adafruit LCD I2C RGB shield, the YourDuino I2C LCD display, and the Linksprite 16 X 2 LCD Keypad Shield.
+This keyer supports an LCD display, either the standard commonplace Hitachi LCD display in four bit mode, the [Adafruit LCD I2C RGB shield](http://adafruit.com/products/714) & [I2C Character Backpack](https://www.adafruit.com/product/292), the [YourDuino I2C LCD display](http://arduino-info.wikispaces.com/LCD-Blue-I2C), and the [Linksprite 16 X 2 LCD Keypad Shield](http://linksprite.com/wiki/index.php5?title=16_X_2_LCD_Keypad_Shield_for_Arduino).
 
 To configure the LCD display, follow these steps:
 
