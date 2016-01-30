@@ -50,7 +50,7 @@ A circuit board and parts kits called the nanoKeyer is available from DJ0MY, and
 * [Sleep Mode](https://github.com/k3ng/k3ng_cw_keyer/wiki#sleep-mode)
 * [USB Mouse Support](https://github.com/k3ng/k3ng_cw_keyer/wiki/Feature:-Keyboard-&-Mouse#usb-mouse)
 * [Mayhew LED Ring Support](https://github.com/k3ng/k3ng_cw_keyer/wiki/Feature:-Speed-Control#mayhew-labs-led-ring)
-* [Alphabet Sending Practice[(https://github.com/k3ng/k3ng_cw_keyer/wiki#alphabet-code-practice-mode)
+* [Alphabet Sending Practice](https://github.com/k3ng/k3ng_cw_keyer/wiki#alphabet-code-practice-mode)
 * QLF / “Messy” Straight Key Emulation
 * [USB Keyboard HID](https://github.com/k3ng/k3ng_cw_keyer/wiki/Feature:-Keyboard-&-Mouse#usb-keyboard) (Human Interface Device) Interface (Keyer = keyboard for your computer)
 
