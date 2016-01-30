@@ -61,6 +61,14 @@ The K3NG Keyer has been feature in the following videos.
 * [CW keyer OZ1JHM Hjalmar Skovholm Hansen](https://youtu.be/XHd9UAVJOLY)
 * [K3NG Keyer on ATmega328 #1](https://youtu.be/D_-1-UKfcJA)
 
+## Building
+Check the following pages for information on constructing your own keyer.
+* [Schematics](https://github.com/k3ng/k3ng_cw_keyer/wiki/Schematic)
+* [Wiring Instructions](https://github.com/k3ng/k3ng_cw_keyer/wiki/Wiring-the-Keyer)
+* [Configuring the Software](https://github.com/k3ng/k3ng_cw_keyer/wiki/Configuring-Your-Keyer)
+
+Also check out [KF4BZT's article](https://kf4bzt.wordpress.com/2015/08/06/arduino-cw-keyer-project/) for lots of hints on working with the schematic for beginners and working with the components including lots of pictures.
+
 ### Beacon Mode
 
 In order to have the keyer go directly into beacon mode at power up or reset and stay in beacon mode, simply ground pin 2.  This is useful for keyers that are dedicated to beacon or fox service.
