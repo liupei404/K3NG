@@ -38,7 +38,7 @@ Macros can be placed in memories to do cool things. Some macros include:
 
 ## Software Configuration
 
-The number of memories is set at compile time using these lines in keyer_settings.hs:
+The number of memories is set at compile time using these lines in keyer_settings.h:
 
     #define number_of_memories 12
     #define memory_area_start 20
