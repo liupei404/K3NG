@@ -1,3 +1,3 @@
-![](https://cloud.githubusercontent.com/assets/3332720/9560100/b9013320-4dd1-11e5-9962-c520b5e3cb11.png)
+![](https://cloud.githubusercontent.com/assets/3332720/18878521/ef36817a-849e-11e6-90c3-baf8701a33f2.png)
 
-Courtesy of F4GWH
+Design Courtesy of F4GWH, Schematic Drawing Courtesy of OK1RR
