@@ -16,7 +16,7 @@ With the K1EL Winkey interface protocol emulation feature enabled, if you hold d
 
 You may need to disable some features to get both the CLI and K1EL Winkey interface protocol emulation features to fit into an Arduino Uno.  Other larger Arduino variants like the Mega can hold all of the features and options.
 
-In K1EL Winkey interface protocol emulation mode the USB port will be set for 1200 baud.  The emulation is a 99.9% complete emulation, and it should work with most programs that support K1EL Winkey interfacing.  The N1MM contesting program and Ham Radio Deluxe (HRD) have been tested and work with all features I’ve tried.  Win-Test works as well, however only with the keyer in Winkey 1 mode.  (There is some sort of initialization error in Winkey 2 mode that I have not been able to identify and correct.)
+In K1EL Winkey interface protocol emulation mode the USB port will be set for 1200 baud.  The emulation is a 99.9% complete emulation, and it should work with most programs that support K1EL Winkey interfacing.  Many contest and logging programs  have been tested and work with all features me and others have tried.  (Win-Test works only with the keyer in Winkey 1 mode)
 
 Currently the following functions are implemented:
 
@@ -54,9 +54,9 @@ The emulation functionality translates the K1EL Winkey interface protocol to nat
 
 SO2R operation has been run successfully with the N1MM contest program.
 
-I have found to have this emulation work reliably with programs other than N1MM, you should disable the Arduino Automatic Software Reset as described here.  This is done by cutting the PC board trace labeled RESET-EN on the Arduino Uno board, or an alternate solution is to install a capacitor on the reset line.  I have found when some programs, including HRD, connect to the COM port, errant bytes are interpreted or received by the Arduino which trips up the protocol conversation and the program and keyer will not connect.  In this configuration the keyer will not reset when a program connects to the COM port and it will be “ready to talk” immediately when the program begins sending bytes.
+I have found to have this emulation work reliably with programs other than N1MM, you should disable the Arduino Automatic Software Reset as described here.  This is done by cutting the PC board trace labeled RESET-EN on the Arduino Uno board, or an alternate solution is to install a capacitor on the reset line.  I have found when some programs connect to the COM port, errant bytes are interpreted or received by the Arduino which trips up the protocol conversation and the program and keyer will not connect.  In this configuration the keyer will not reset when a program connects to the COM port and it will be “ready to talk” immediately when the program begins sending bytes.
 
-If you do not disable Automatic Software Reset and are using Ham Radio Deluxe uncomment the following line:
+If you do not disable Automatic Software Reset and experience issues, uncomment the following line:
 
     #define OPTION_WINKEY_DISCARD_BYTES_AT_STARTUP
 
@@ -65,10 +65,6 @@ This option will discard the first three bytes that arrive on the USB port.  Thi
     #define winkey_discard_bytes_startup 3
 
 A side effect of disabling Automatic Software Reset is that you will need to manually hit the reset button when uploading new software to the Arduino.  The button should be pressed as soon as you “Binary sketch size: xxxxx bytes” message in the Arduino program.
-
-In the last free version of HRD, there is a bug in its Winkey interface implementation.  If you rapidly change the dah to dit ratio in the graphical user interface or change the speed rapidly, HRD will send incomplete commands to the Winkey.  This will cause errant characters to be sent by the keyer, but otherwise the keyer will continue to function.
-
-Ham Radio Deluxe offers a very nice Winkey settings interface.  Presumably one could use this interface in place of the keyer command mode or command line interface and control most of the functionality in this keyer.
 
 If you attempt to use this emulation with other programs and have issues, please let me know and I’ll attempt to figure it out.  Serial port sniffer captures are very helpful in troubleshooting these issues.
 
