@@ -78,4 +78,4 @@ Despite the claims, the N1MM program is not open source.  If you request the sou
 
 If you would like to use RUMlog or RUMped activate OPTION_WINKEY_FREQUENT_STATUS_REPORT.  Both programs like to have very frequent status bytes back from the Winkey host in order to send code properly.
 
-If you’re using Wintest, active OPTION_WINKEY_2_HOST_CLOSE_NO_SERIAL_PORT_RESET.
+If you’re using Win-Test, active OPTION_WINKEY_2_HOST_CLOSE_NO_SERIAL_PORT_RESET.
