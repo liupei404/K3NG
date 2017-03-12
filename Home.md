@@ -1,4 +1,4 @@
-Full documentation for the K3NG Arduino CW Keyer is located [here](http://blog.radioartisan.com/arduino-cw-keyer/). It is being moved over to the wiki, but this is not yet complete
+
 
 ***
 
