@@ -73,6 +73,7 @@ PS2 / USB Special Key Assignments:
 * CTRL-M – Set Farnsworth Speed (requires FEATURE_FARNSWORTH)
 * CTRL-N – Paddle Revers
 * CTRL-O – Sidetone On/Off
+* CTRL-S - CMOS Superkeyer Timing On/Off
 * CTRL-T – Tune
 * CTRL-U – PTT Manual On/Off
 * CTRL-W – Set WPM
