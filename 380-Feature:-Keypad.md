@@ -27,4 +27,6 @@ unused key or unused keys can be commented out.
 The code shows the proper OUTPUT pins on the Arduino Mega 2560 to use with either
 keypad and the ROW/COLUMN pins on the keypads.
 
+![](https://cloud.githubusercontent.com/assets/3332720/23837631/76783c4c-0761-11e7-8418-6713ed5ee172.png)
+
 _Code and wiki text contributed by W0XR_
