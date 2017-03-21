@@ -54,7 +54,7 @@ The emulation functionality translates the K1EL Winkey interface protocol to nat
 
 SO2R operation has been run successfully with the N1MM contest program.
 
-I have found to have this emulation work reliably with programs other than N1MM, you should disable the Arduino Automatic Software Reset as described here.  This is done by cutting the PC board trace labeled RESET-EN on the Arduino Uno board, or an alternate solution is to install a capacitor on the reset line.  I have found when some programs connect to the COM port, errant bytes are interpreted or received by the Arduino which trips up the protocol conversation and the program and keyer will not connect.  In this configuration the keyer will not reset when a program connects to the COM port and it will be “ready to talk” immediately when the program begins sending bytes.
+I have found to have this emulation work reliably with programs other than N1MM, you should disable the Arduino Automatic Software Reset as described [here](http://playground.arduino.cc/Main/DisablingAutoResetOnSerialConnection).  This is done by cutting the PC board trace labeled RESET-EN on the Arduino Uno board, or an alternate solution is to install a capacitor on the reset line.  I have found when some programs connect to the COM port, errant bytes are interpreted or received by the Arduino which trips up the protocol conversation and the program and keyer will not connect.  In this configuration the keyer will not reset when a program connects to the COM port and it will be “ready to talk” immediately when the program begins sending bytes.
 
 If you do not disable Automatic Software Reset and experience issues, uncomment the following line:
 
@@ -74,7 +74,7 @@ N1MM exhibits a minor bug in the Send CW (CTRL K) window.  If you hit the Tab ke
 
 Note this option breaks SO2R functionality in N1MM, but if you’re only going to be using one rig it will work fine.  I offered to give the N1MM team details on the bug, however my offer was ignored.  But I digress.
 
-Despite the claims, the N1MM program is not open source.  If you request the source code it may be given to you and you can’t redistribute it or fork the code.  That’s called freeware and beg-for-the-source.  Not that there’s anything wrong with that, just don’t call it open source.  But I digress.  This keyer is compatible with both N1MM classic and N1MM Plus, despite my polite requests to be listed on the hardware compatibility page which have been ignored.  But I digress.  I seem to digress a lot, don’t I?
+Despite any claims, the N1MM program is not open source.  If you request the source code it may be given to you and you can’t redistribute it or fork the code.  That’s called freeware and beg-for-the-source.  Not that there’s anything wrong with that, just don’t call it open source.  But I digress.  This keyer is compatible with both N1MM classic and N1MM Plus, despite my polite requests to be listed on the hardware compatibility page which have been ignored.  But I digress.  I seem to digress a lot, don’t I?
 
 If you would like to use RUMlog or RUMped activate OPTION_WINKEY_FREQUENT_STATUS_REPORT.  Both programs like to have very frequent status bytes back from the Winkey host in order to send code properly.
 
