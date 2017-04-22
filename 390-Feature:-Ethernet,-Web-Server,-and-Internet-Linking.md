@@ -60,7 +60,11 @@ The Control page has several variations:
 
 # Internet Linking
 
+The Internet Link functionality allows you to link two keyers together, with one sending keying data to the other.  Any keying on the sending keyer will be mimicked on the receiving keyer, including paddle, straight key, CLI, Winkeyer, and keyboard sending.  The Internet linking uses a simple UDP protocol that compensates for latency and jitter over the Internet in order to provide the most accurately timed keying.  Note that there may be a slight delay between the keying on the sending keyer and the keying on the receiving keyer, however the keying timing (which is most important) should be preserved. 
+
 Internet linking is activated using FEATURE_INTERNET_LINK.  This feature has FEATURE_WEB_SERVER as a dependency.
+
+Note that if you are sending link data across the Internet and you're behind firewall on either or both ends, you will need to configure NAT (Network Address Translation).  Configuration of NAT is beyond the scope of this Wiki page.  Google is your friend.
 
 ## Link Setup Example
 
