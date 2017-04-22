@@ -21,14 +21,22 @@ The web server is activated by enabling FEATURE_WEB_SERVER in your features and 
 
 The configuration included in the settings file shows how to setup two units.  Naturally, each needs to have a unique IP address (FEATURE_ETHERNET_IP) and MAC address (FEATURE_ETHERNET_MAC).  The gateway (FEATURE_ETHERNET_GATEWAY) is typical set to the gateway address of the LAN, and in home networks the subnet mask (FEATURE_ETHERNET_SUBNET_MASK) is typical 255.255.255.0.  FEATURE_ETHERNET_WEB_LISTENER_PORT specifies the TCP port the webserver will listen on, with port 80 being the default port for web services.
 
+Note that the network settings in the settings file are used on boot up and written to EEPROM settings the first time the code is run.  If the network settings are changed using the Network Setting page (shown below), the settings in EEPROM are updated.  (If you make a mistake with the network settings using the Network Settings web page, you can recover the network settings by changing eeprom_magic_number in the .ino file and uploading the code.  The new magic number will tell the code to reinitialize the EEPROM with fresh settings.)
+
+## Operation
+
 To access the web server, enter the IP address of the Arduino Ethernet shield for the address, for example:
 
 http://192.168.1.179/
 
-The Main Main Web Page
+## The Main Main Web Page
 
 ![image](https://cloud.githubusercontent.com/assets/3332720/25308903/5cc5389e-278d-11e7-834b-7b93d8439a44.png)
 
+
+## Control Page
+
+![image](https://cloud.githubusercontent.com/assets/3332720/25308935/f0bd059a-278d-11e7-9b8d-4d7e2e7de0c0.png)
 
 The Control page has several variations:
 
@@ -38,7 +46,17 @@ The Control page has several variations:
 
     /ctrlnd?st<TEXTTOSEND>/ - Send CW text for example: http://192.168.1.179/ctrlnd?sttest/ will sent TEST in CW
 
-    
+## Memories Page
+
+![image](https://cloud.githubusercontent.com/assets/3332720/25308940/023fc410-278e-11e7-9512-c98fd8045cbe.png)
+
+## Keyer Settings Page
+
+![image](https://cloud.githubusercontent.com/assets/3332720/25308945/19002f5a-278e-11e7-85e5-f738cc670124.png)
+
+## Network Settings
+
+![image](https://cloud.githubusercontent.com/assets/3332720/25308953/3ba9b3f0-278e-11e7-97e6-526363714fee.png)    
 
 # Internet Linking
 
