@@ -44,7 +44,8 @@ The Control page has several variations:
 
     /ctrlnd - Control Page, No Display
 
-    /ctrlnd?st<TEXTTOSEND>/ - Send CW text for example: http://192.168.1.179/ctrlnd?sttest/ will sent TEST in CW
+    /ctrlnd?st<TEXTTOSEND>/ - Send CW text for example: 
+                              http://192.168.1.179/ctrlnd?sttest/ will sent TEST in CW
 
 ## Memories Page
 
