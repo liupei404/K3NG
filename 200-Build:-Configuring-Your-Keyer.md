@@ -1,6 +1,6 @@
 # Configuring the Keyer Code
 
-Starting with (stable release) Version 2.0, the configuration options and various other settings are broken out into separate files. You will mostly be working with key_feature_and_options.h until you start deciding to use different pins than the schematics plan for or modify the way the keyer works.
+The configuration options and various other settings are broken out into separate files. You will mostly be working with key_feature_and_options.h until you start deciding to use different pins than the schematics plan for or modify the way the keyer works.
 
 > **[keyer_features_and_options.h](https://github.com/k3ng/k3ng_cw_keyer/blob/master/keyer_features_and_options.h)**: configure the features you want here. A list of features, options and their descriptions can be found in the [Features and Options](https://github.com/k3ng/k3ng_cw_keyer/wiki/Features-and-Options) page.
 
