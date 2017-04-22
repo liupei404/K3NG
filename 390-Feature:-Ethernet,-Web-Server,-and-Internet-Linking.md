@@ -25,6 +25,10 @@ To access the web server, enter the IP address of the Arduino Ethernet shield fo
 
 http://192.168.1.179/
 
+The Main Main Web Page
+
+![image](https://cloud.githubusercontent.com/assets/3332720/25308903/5cc5389e-278d-11e7-834b-7b93d8439a44.png)
+
 
 The Control page has several variations:
 
@@ -39,6 +43,16 @@ The Control page has several variations:
 # Internet Linking
 
 Internet linking is activated using FEATURE_INTERNET_LINK.  This feature has FEATURE_WEB_SERVER as a dependency.
+
+## Link Setup Example
+
+Sending Side
+
+![image](https://cloud.githubusercontent.com/assets/3332720/25308913/9554f19a-278d-11e7-8b6c-87e38bae3946.png)
+
+Receiving Side
+
+![image](https://cloud.githubusercontent.com/assets/3332720/25308923/bb717ea2-278d-11e7-9747-478daeef1f2e.png)
 
 
 
