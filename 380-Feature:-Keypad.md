@@ -1,5 +1,3 @@
-_This code is currently under construction_
-
 A 3x4 or 4x4 membrane keypad can be substituted for the pushbutton memory switches,
 but the MEMORY buttons can be retained and used with no effects on the
 COMMAND/MEMORY functions.
