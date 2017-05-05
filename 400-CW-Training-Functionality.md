@@ -1,1 +1,6 @@
 Under construction
+
+    #define FEATURE_TRAINING_COMMAND_LINE_INTERFACE
+
+    #define OPTION_WORDSWORTH_CZECH
+    #define OPTION_WORDSWORTH_DEUTSCH
