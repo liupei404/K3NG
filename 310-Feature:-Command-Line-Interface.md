@@ -24,7 +24,7 @@ Commands are preceded with a backslash (” \ “), the key above your Enter key
     \h Switch to Hell sending
     \i Transmit enable/disable
     \j### Dah to dit ratio (300 = 3.00)
-    \k Callsign receive practice
+    \k CW Training Module
     \l## Set weighting (50 = normal)
     \m### Set Farnsworth speed
     \n Toggle paddle reverse
