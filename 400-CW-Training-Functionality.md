@@ -16,11 +16,23 @@ To enable the command line based training, uncomment this line in you features f
 To access the CW training module, in the command line interface execute the \K command and you will see this menu:
 
     CW Training Menu
-    U - US Callsigns
+
+    C - Callsigns
+    I - Callsigns - Interactive Practice
     W - Wordsworth
+
     X - Exit
 
-# US Callsign
+# Callsigns
+
+    Callsign Practice Menu
+
+    I - International Callsigns
+    U - US Callsigns
+    E - European Callsigns
+    C - Canadian Callsigns
+
+    X - Exit
 
 # Wordsworth
 
@@ -34,14 +46,18 @@ The Wordsworth method was created by George Allison, K1IG, and was described in 
     N - Names
     Q - QSO Words
     M - Mixed
-    S - Set wordspace
+
+    O - Set Wordspace
     W - Set WPM
+    R - Set Repetition
+
     X - Exit
 
-    WPM:25 Wordspace:12 Effective WPM:13
+    WPM:27 Wordspace:8 Effective WPM:17 Repetition:3
 
 
-The default language for the Wordworth practice is English, however multi-language support is in progress.  There is a Czech translation and at the time of this writing a German translation is in progress.  To enable a translation, uncomment one of these lines in your features file:
+The default language for the Wordworth practice is English, however multi-language support is in progress.  There is are Czech and Norwegian translations and at the time of this writing a German translation is in progress.  To enable a translation, uncomment one of these lines in your features file:
 
     #define OPTION_WORDSWORTH_CZECH
+    #define OPTION_WORDSWORTH_NORSK
     #define OPTION_WORDSWORTH_DEUTSCH
