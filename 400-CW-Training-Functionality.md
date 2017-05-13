@@ -19,6 +19,7 @@ To access the CW training module, in the command line interface execute the \K c
 
     C - Callsigns
     I - Callsigns - Interactive Practice
+    R - Random Groups
     W - Wordsworth
 
     X - Exit
@@ -31,6 +32,16 @@ To access the CW training module, in the command line interface execute the \K c
     U - US Callsigns
     E - European Callsigns
     C - Canadian Callsigns
+
+    X - Exit
+
+# Random Groups
+
+    Random Code Menu
+
+    A - Letter Groups
+    1 - Number Groups
+    M - Mixed Groups
 
     X - Exit
 
