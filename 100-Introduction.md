@@ -441,12 +441,6 @@ Do not enable the potentiometer feature if you do not have a potentiometer conne
 
 The K3NG Arduino Keyer will not work with Logger16, Logger32, Logger64, Logger128, and Logger256.  I haven’t tested Logger1024 or Logger2048, but it probably doesn’t work with them either.  Attempts to interface this keyer to any version of Logger may result in your Arduino board smoking or perhaps bursting into flames.  Contact the (un)friendly support people on the Logger Yahoo Group for help with this issue.  Be sure to drink a Lager or 32 afterwards.
 
-## Arduino LLC versus Arduino SRL
-
-Please note that the real Arduino organization is [Arduino LLC](http://www.arduino.cc/) at [arduino.cc](http://www.arduino.cc/), not Arduino SRL at arduino.org.  If you have purchased an Arduino board since about March 2014 with arduino.org on it, this board did not support the Arduino organization or development of Arduino projects and code.  Encourage the resellers you buy Arduino products from to drop Arduino SRL products and carry those which support the Arduino LLC organization.
-
-Arduino models specifically offered by Arduino SRL such as the Yun and Zero and the forked Arduino SRL IDE interface will not be supported by this project.
-
 ## Support
 
 Please consult [this page](http://blog.radioartisan.com/support-for-k3ng-projects/) for support information.  Feature requests and bug reports are documented and tracked on [GitHub](https://github.com/k3ng/k3ng_cw_keyer/issues).
