@@ -53,6 +53,7 @@ A circuit board and parts kits called the [nanoKeyer](http://nanokeyer.wordpress
 * [Alphabet Sending Practice](https://github.com/k3ng/k3ng_cw_keyer/wiki#alphabet-code-practice-mode)
 * QLF / “Messy” Straight Key Emulation
 * [USB Keyboard HID](https://github.com/k3ng/k3ng_cw_keyer/wiki/Feature:-Keyboard-&-Mouse#usb-keyboard) (Human Interface Device) Interface (Keyer = keyboard for your computer)
+* [Training Module](https://github.com/k3ng/k3ng_cw_keyer/wiki/400-CW-Training-Functionality)
 
 ## Videos
 The K3NG Keyer has been feature in the following videos.
