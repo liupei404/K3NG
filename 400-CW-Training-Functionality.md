@@ -1,13 +1,12 @@
 # Introduction
 
-Under Construction....
+The K3NG Arduino keyer has a training module which currently supports these training modes:
 
-The K3NG Arduino keyer has a training module, which at the time of this writing is evolving.  Currently it supports these training modes:
-
-US Callsign Copying
+Callsigns
+Random Groups
 Wordsworth
 
-There are plans to add random code group copying, international callsign copying, and interactive contest exchange training.  Currently the training functionality is command line interface (CLI) based, however there a plans to make several of the modes that don't require the serial interface/CLI available in command mode.
+There are plans to add interactive contest exchange training.  Currently the training functionality is command line interface (CLI) based, however there are plans to make several of the modes that don't require the serial interface/CLI available in command mode.
 
 To enable the command line based training, uncomment this line in you features file:
 
