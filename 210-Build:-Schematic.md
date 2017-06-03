@@ -1,5 +1,7 @@
 # Basic Schematic
 
+This design will provide you with a basic keyer with command buttons, a potentiometer speed control, speaker sidetone output, and three transmitter outputs.  The lines for connecting a PS2 keyboard are also shown.  The Arduino Uno, Nano, Mega, and other board versions and variants can be used, however the Arduino Mega is highly recommended.
+
 ![k3ng keyer schematic](https://radioartisan.files.wordpress.com/2011/03/k3ng-keyer-schematic-2012052101.png)
 [Bigger version](https://radioartisan.files.wordpress.com/2011/03/k3ng-keyer-schematic-2012052101.png)
 
