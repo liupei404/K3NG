@@ -11,6 +11,8 @@ Marc-Andre, VE2EVN, created this schematic for his keyer build using an Arduino 
 
 ![ve2evn keyer schematic](https://cloud.githubusercontent.com/assets/3332720/26757687/60e1159c-488a-11e7-86ae-314ab5ba8791.png)
 
+# Additional Resources
+
 These [detailed building plans by KF4BZT](https://kf4bzt.wordpress.com/2015/08/06/arduino-cw-keyer-project/) may be helpful to people new to building this sort of projct.
 
 This [Fritzing Breadboard Plan](http://fritzing.org/media/fritzing-repo/projects/k/k3ng-project/images/K3NG%20keyer_bb.png) may also help in breadboarding your first prototype.
