@@ -3,7 +3,7 @@
 This design will provide you with a basic keyer with command buttons, a potentiometer speed control, speaker sidetone output, and three transmitter outputs.  The lines for connecting a PS2 keyboard are also shown.  The Arduino Uno, Nano, Mega, and other board versions and variants can be used, however the Arduino Mega is highly recommended.
 
 ![k3ng keyer schematic](https://radioartisan.files.wordpress.com/2011/03/k3ng-keyer-schematic-2012052101.png)
-[Bigger version](https://radioartisan.files.wordpress.com/2011/03/k3ng-keyer-schematic-2012052101.png)
+[Large Version](https://radioartisan.files.wordpress.com/2011/03/k3ng-keyer-schematic-2012052101.png)
 
 **Note:** Ignore the numbers on the outside of the Arduino symbol and refer to the numbers within the box for pin connections (i.e. D2, D3, A0, etc.)  All capacitor values are in microfarads (uF), unless otherwise stated.  No values are super critical and typical tolerance components may be used.  1K ohm resistors are better suited than the 100 ohm transistor base resistors shown in the schematic.  Use 1k resistors; I am in the process of updating the schematic.
 
@@ -12,6 +12,8 @@ This design will provide you with a basic keyer with command buttons, a potentio
 Marc-Andre, VE2EVN, created this schematic for his keyer build using an Arduino Nano.
 
 ![ve2evn keyer schematic](https://cloud.githubusercontent.com/assets/3332720/26757687/60e1159c-488a-11e7-86ae-314ab5ba8791.png)
+
+[Large Version](https://cloud.githubusercontent.com/assets/3332720/26757687/60e1159c-488a-11e7-86ae-314ab5ba8791.png)
 
 # Additional Resources
 
