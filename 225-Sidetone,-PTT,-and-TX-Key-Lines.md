@@ -47,3 +47,25 @@ PTT and TX key lines can be inhibited with the FEATURE_PTT_INTERLOCK function.  
     #define ptt_interlock 0
 
 When the input is taken high, the PTT and TX key lines will not go active.
+
+
+### Multi-Transmitter Capability
+
+This keyer supports multiple transmitters that can be selected using the \x CLI command, the CTRL-F1, F2, etc. key combinations on the PS2 keyboard, or using the hardware buttons (button1 hold, button2 hold, button3 hold, etc.).  Up to six transmitters can be configured, each with its own keying line and PTT line.  PTT lines are optional.  The configuration of the TX Key and PTT lines are here:
+
+    #define tx_key_line_1 11
+    #define tx_key_line_2 12
+    #define tx_key_line_3 13
+    #define tx_key_line_4 0
+    #define tx_key_line_5 0
+    #define tx_key_line_6 0
+
+    #define ptt_tx_1 0
+    #define ptt_tx_2 0
+    #define ptt_tx_3 0
+    #define ptt_tx_4 0
+    #define ptt_tx_5 0
+    #define ptt_tx_6 0
+
+Setting a line to zero disables it.  At the very least you need one TX Key line defined.  Obviously, with the Arduino Uno, pins are at a premium and each features uses pins.  Larger Arduino platforms like the Mega offer more pins and more compiled-in functionality due to the larger memory space.
+
