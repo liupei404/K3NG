@@ -80,75 +80,6 @@ Also check out [KF4BZT's article](https://kf4bzt.wordpress.com/2015/08/06/arduin
 Jmatonis has published on [Thingiverse a 3D model of his keyer enclosure](https://www.thingiverse.com/thing:2399311).
 
 
-### Sidetone Line
-
-The sidetone line normally outputs square wave sidetone for driving a speaker.  Sidetone can be disabled on transmit using the command mode O command.  This is for transmitters that generate their own sidetone.
-
-The sidetone frequency can be adjusted using the F command in command mode.
-
-### PTT (“Push To Talk”)
-
-The PTT pins go high whenever code is sent.  If it’s desired to have the PTT line go high before code is sent or stay high for a period of time after code stops being sent, these lines can be adjusted in keyer_settings.h:
-
-    #define initial_ptt_lead_time_tx1 10
-    #define initial_ptt_tail_time_tx1 10
-    #define initial_ptt_lead_time_tx2 10
-    #define initial_ptt_tail_time_tx2 10
-    #define initial_ptt_lead_time_tx3 10
-    #define initial_ptt_tail_time_tx3 10
-    #define initial_ptt_lead_time_tx4 10
-    #define initial_ptt_tail_time_tx4 10
-    #define initial_ptt_lead_time_tx5 10
-    #define initial_ptt_tail_time_tx5 10
-    #define initial_ptt_lead_time_tx6 10
-    #define initial_ptt_tail_time_tx6 10
-
-The lead and tail times are in milliseconds, and these are set for each transmitter independently.  This feature is useful for driving T/R switches or older transmitters than need a little more time to get keyed up, or FM fox transmitters that need to have PTT keyed and sidetone pumped into the microphone line.
-
-Hang time can be set by modifying this line in keyer_settings.h:
-
-    #define default_ptt_hang_time_wordspace_units 0.0
-
-PTT tail time is invoked when sending code automatically, such as via a memory play, the CLI, the PS2 keyboard, or Winkey interface emulation.  PTT hang time is invoked for manual sending using the paddle and is speed (wpm) dependent.
-
-Note that if you activate PTT lead time, you should activate tail time as well, otherwise PTT lead time will be invoked before each dit or dah, significantly slowing down the sending speed.
-
-Currently PTT lead, tail, and hang times can only be changed at runtime using the Winkey interface emulation.  (Let me know if you would like CLI commands to do this.)
-
-For testing purposes the PTT line can be manually toggled on and off using the \u CLI command.
-
-If your CW transmitter keys up when the CW line is keyed (or you are not going to use multi-transmitter support), there is probably no need to use the PTT line.
-
-If you do not need the PTT lines and wish to use the Arduino pins for another function such as a transmitter keying line, simply set the pin number to zero, as so:
-
-    #define ptt_tx_1 0
-    #define ptt_tx_2 0
-
-PTT and TX key lines can be inhibited with the FEATURE_PTT_INTERLOCK function.  The PTT interlock pin is defined on this line:
-
-    #define ptt_interlock 0
-
-When the input is taken high, the PTT and TX key lines will not go active.
-
-### QRSS (Slow Speed CW)
-
-QRSS mode can be activated using the command line \q command or in memory macros using the \q macro.  Both take the dit length in seconds (double digit number) as an argument.  For example: \q09 would put the keyer in QRSS mode with nine second long dits (and 27 second long dahs).
-
-The \r command will switch back to regular CW speed mode in both the command line and in memories.
-
-### HSCW (High Speed CW)
-
-High speed CW can be accomplished by using the \w command line interface command or in memories as a macro.  Whereas the command mode speed adjustment and the speed potentiometer allow the speed to go up to a maximum of 60 WPM, the \w command will let you take it up to 255 WPM.
-
-### Hellschreiber
-
-The keyer will send Hellschreiber characters by placing it in Hellscreiber mode using the \h command in the serial command line interface or memory macros.  In the command line interface \c will return the keyer to CW mode and the \l (as in lima) memory macro will change back to CW.  While in Hellschreiber mode, the paddle will still send CW.  The Hellschreiber mode is intended mainly for beacons but works just fine for direct keyboard sending and is enabled with FEATURE_HELL in keyer_features_and_options.h.
-
-![Hellschreiber copied from the keyer speaker into a laptop](https://radioartisan.files.wordpress.com/2011/03/k3ng-keyer-hell.png)
-
-Hellschreiber Copied From the Keyer Speaker into a Laptop
-
-Know of any commercial keyers that send Hellschreiber?  :-)  Keep reading.  There’s more.
 
 ### CW Dah to Dit Ratio Adjust
 
@@ -232,26 +163,6 @@ This feature turns off the transmit line after 100 consecutive dits or dahs.  It
 
 To reset the keyer to defaults, depress both the left and right paddles and do a reset or power reset.  This will wipe out all memories and change all the settings back to defaults.
 
-### Multi-Transmitter Capability
-
-This keyer supports multiple transmitters that can be selected using the \x CLI command, the CTRL-F1, F2, etc. key combinations on the PS2 keyboard, or using the hardware buttons (button1 hold, button2 hold, button3 hold, etc.).  Up to six transmitters can be configured, each with its own keying line and PTT line.  PTT lines are optional.  The configuration of the TX Key and PTT lines are here:
-
-    #define tx_key_line_1 11
-    #define tx_key_line_2 12
-    #define tx_key_line_3 13
-    #define tx_key_line_4 0
-    #define tx_key_line_5 0
-    #define tx_key_line_6 0
-
-    #define ptt_tx_1 0
-    #define ptt_tx_2 0
-    #define ptt_tx_3 0
-    #define ptt_tx_4 0
-    #define ptt_tx_5 0
-    #define ptt_tx_6 0
-
-Setting a line to zero disables it.  At the very least you need one TX Key line defined.  Obviously, with the Arduino Uno, pins are at a premium and each features uses pins.  Larger Arduino platforms like the Mega offer more pins and more compiled-in functionality due to the larger memory space.
-
 ### Dit and Dah Pins
 
 If you need separate pins to indicate dits and dah, the pins can be defined here:
@@ -301,65 +212,8 @@ This feature is enabled by uncommenting:
 
 The code for this feature was provided by Ryan, KC2ZWM.
 
-### QLF Feature
 
-This feature emulates someone sending with their left foot.  Activate with FEATURE_QLF.  Various settings to tweak the behavior are:
 
-    #define qlf_dit_max 125
-    #define qlf_dit_min 75
-    #define qlf_dah_max 200
-    #define qlf_dah_min 100
-    #define qlf_on_by_default 0
-
-QLF mode is activate in the command line interface using the \{  command.
-
-Have fun!
-
-### CW Decoder
-
-The keyer can be configured to decode off the air CW using FEATURE_CW_DECODER.  The decoded character are displayed in both the Command Line Interface (CLI) and LCD display, whichever is configured.  The input pin for the CW decoder is defined in keyer_pin_settings.h:
-
-    #define cw_decoder_pin A11
-
-If you wish to have a indicator to assist in tuning in the CW signal and setting levels, define this output pin:
-
-    #define cw_decoder_indicator 24
-
-This is especially useful with the DSP Audio Decoder described below, driving an LED indicator.
-
-The CW decoder can be interfaced two ways:
-
-### External Tone Decoder Hardware
-
-If external tone decoding hardware is used, cw_decoder_pin is a straight digital input.  Drive it low (0V) when there is a CW signal, and high (+5V) when there is no CW tone.
-
-### DSP Audio Tone Decoder
-
-To activate the audio tone decoder in software, activate OPTION_CW_DECODER_GOERTZEL_AUDIO_DETECTOR. This option compiles in a [Goertzel DSP](http://en.wikipedia.org/wiki/Goertzel_algorithm) audio detector.  The code used in the CW keyer was originally written by Hjalmar skovholm Hansen, OZ1JHM  and is described further on [his project web page](http://www.skovholm.com/cwdecoder).  When using this option cw_decoder_pin must be an analog pin, such as A1, A2, A3, etc.
-
-The DSP audio tone decoder requires two library files: [goertzel.h](https://github.com/k3ng/k3ng_cw_keyer/blob/master/libraries/goertzel.h) and [goertzel.cpp](https://github.com/k3ng/k3ng_cw_keyer/blob/master/libraries/goertzel.cpp).  Goertzel.h contains several settings:
-
-    #define GOERTZ_SAMPLING_FREQ 8928.0
-    #define GOERTZ_NOISE_BLANKER_INITIAL_MS 6
-    #define GOERTZ_TARGET_FREQ 558.0
-    #define GOERTZ_SAMPLES 64
-
-    #define GOERTZ_MAGNITUDE_LIMIT_LOW 100
-    #define GOERTZ_MAGNITUDE_THRESHOLD 0.6
-    #define GOERTZ_MOVING_AVERAGE_FILTER 6
-
-Prior to making changes, please read the notes in the source code.  The sampling frequency is CPU dependent and there is a mathematical relationship between the sampling frequency, target frequency, and number of samples.
-
-The Arduino Due has an 84 Mhz clock, so the sampling frequency will be different than the Arduino Uno and Mega which both have a 16 Mhz clock.  For the Due, you can use these settings:
-
-    #define GOERTZ_SAMPLING_FREQ 46872.0
-    #define GOERTZ_SAMPLES 168
-
-To interface the audio with the Arduino, consult [Hjalmar’s project page](http://www.skovholm.com/cwdecoder) for the circuit.  It’s very simple.  A 10k ohm resistor goes from +5V to the analog pin, and a 10k ohm resistor is placed from the analog pin to ground.  This biases the analog pin at +2.5 volts.  The audio is coupled to the analog pin via a 0.1 uF capacitor.
-
-As far as tuning in signals, I have found that the DSP decoders better when receiver filters are wide.  It’s counterintuitive, but narrow CW filters seem to make the DSP decoding not perform as well.  Also, the optimal audio level appears to be just slightly above the threshold where tone detection occurs.  An LED using the cw_decoder_indicator output pin is very helpful in determining this point.
-
-The CW decoder is still a bit experimental and it is planned to improve the decoding algorithm.
 
 ### Multiple Serial Ports
 
@@ -392,52 +246,10 @@ To summarize some configuration combinations:
 > 
 > FEATURE_COMMAND_LINE_INTERFACE+FEATURE_COMMAND_LINE_INTERFACE_ON_SECONDARY_PORT: CLI on both primary port (“Serial0”) and secondary port (Serial1) all the time
 
-### Arduino Due Hardware
-
-To compile the code for the Arduino Due, uncomment HARDWARE_ARDUINO_DUE in keyer_hardware.h.
-
-The Due does not have EEPROM memory like the other Arduino boards.  So either you must run the code without EEPROM functionality, or install an external EEPROM.  Support for the [E24C1024 EEPROM](http://www.mouser.com/Search/ProductDetail.aspx?R=CAT24C256LI-Gvirtualkey69800000virtualkey698-CAT24C256LI-G) is available; compile in FEATURE_EEPROM_E24C1024.  If you do not install external EEPROM hardware, you cannot compile in FEATURE_MEMORIES and all settings will be volatile (they will not survive a reboot).  You will also notice that the keyer does the beep-boop-beep-boop-beep-boop at power up to indicate that it is initializing with “factory” settings.  This is because there is no EEPROM to pull settings from and the code thinks it is being booted up for the first time.
-
-## Code Compilation
-
-All of the features will not fit on an Arduino Uno simultaneously.  If the compiled code goes over about 28.5K, the upload a stock Uno will fail.  The Nano holds slightly more than a stock Arduino.
-
-You can burn an alternate bootloader to your Uno called [Optiboot](http://code.google.com/p/optiboot/) which will free up an additional 1.5K of program space to stuff additional features on to your Uno.
-
-The [Arduino Mega](http://arduino.cc/en/Main/ArduinoBoardMega) will run the entire “nine yards” compiled and is a fun board.  The Arduino Due will also run all of the code.
 
 ## Miscellaneous Notes
 
 Do not enable the potentiometer feature if you do not have a potentiometer connected, otherwise noise on the pin will falsely trigger speed changes.  Also, do not enable FEATURE_BUTTONS unless you have the corresponding resistors on the button pin connected.  If the analog button pin does not have +5 volts on it, the keyer will not start up as it thinks there is a button depression in progress.
 
-The K3NG Arduino Keyer will not work with Logger16, Logger32, Logger64, Logger128, and Logger256.  I haven’t tested Logger1024 or Logger2048, but it probably doesn’t work with them either.  Attempts to interface this keyer to any version of Logger may result in your Arduino board smoking or perhaps bursting into flames.  Contact the (un)friendly support people on the Logger Yahoo Group for help with this issue.  Be sure to drink a Lager or 32 afterwards.
 
-## Support
 
-Please consult [this page](http://blog.radioartisan.com/support-for-k3ng-projects/) for support information.  Feature requests and bug reports are documented and tracked on [GitHub](https://github.com/k3ng/k3ng_cw_keyer/issues).
-
-I encourage you to experiment with the code, customize it, learn from it, and have fun.  That’s what amateur radio is all about.  However, if you’re a novice programmer, please don’t ask me to work on your hacked up code to implement some specific application you’re looking for.  If you would like for me to develop code for a specific piece of hardware or a device, you may be able to interest me in doing this by sending me a piece of hardware (free) to develop with and use.
-
-I am not an expert or professional programmer.  I tend to write readable code with sufficient though often sparse comments.  (Good code shouldn’t need a lot of comments.) I avoid complexities that some hotshot C or C++ programmers may do as the goal here is to have fun, not show off how obfuscated I can make my code.  Undoubtedly there are better or more efficient ways to do some things in the code.
-
-Have fun!
-
-## DXpeditions
-
-I will donate keyer parts or assembled keyer units for DXpeditions.  Please contact me at anthony dot good at gmail dot com to discuss if you’re organizing a DXpedition.
-
-[MJ/ON6NB DXpedition using the K3NG Keyer running on nanoKeyer hardware](http://users.telenet.be/on4ann/MJ/index.html) (Donated May 2013)
-
-## Kitting
-
-If you sell kits using my code for a profit, I ask that you send me a free kit as a courtesy.  Share the love. :-)
-
-## The Code
-
-Now that you’ve read through all of the documentation, you will be rewarded with source code.  :-)
-
-Source code is located on [GitHub](https://github.com/k3ng/k3ng_cw_keyer).  Click the Download Zip button on the lower right to get all the code in a ZIP file.)
-
-Older code versions can be found [here](https://github.com/k3ng/k3ng_cw_keyer/commits/master).  Click the commit you’re interested in, click Browse Files and you will find a Download ZIP button that you can use to download that particular git commit / version.
-
-Code contributions and help testing features are welcome!
