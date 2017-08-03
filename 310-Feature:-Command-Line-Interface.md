@@ -8,7 +8,7 @@ Simply connect to your computer and use a terminal program such as the Arduino s
 
 To use the CW keyer functionality, simply type in what you want to send.  In the Arduino serial interface you will need to hit Enter to send the data to the keyer for it to start sending.  Programs like Putty will immediately send the characters and the keyer will send the code immediately as well.
 
-Commands are preceded with a backslash (” \ “), the key above your Enter key (at least on US PC keyboards).  To see a help screen, enter backslash question mark ” \? ”  (no quotes).  The status command (\s) is a useful command for viewing various settings and seeing the contents of the memories.  If you enter a double backslash (“\\”), all sending buffers will be cleared and any memory sending will stop (this includes sending invoked by the PS2 keyboard or Winkey interface protocol emulation features).
+Commands are preceded with a backslash (” \ “), the key above your Enter key (at least on US PC keyboards).  To see a help screen, enter backslash question mark ” \? ”  (no quotes).  The status command (\s) is a useful command for viewing various settings and seeing the contents of the memories.  If you enter a double backslash (“\\\\”), all sending buffers will be cleared and any memory sending will stop (this includes sending invoked by the PS2 keyboard or Winkey interface protocol emulation features).
 
 ### CLI Commands:
 
