@@ -25,7 +25,7 @@ Only enable this functionality if you have a potentiometer connnected, otherwise
 
 You can enable or disable this feature in the command line using the \v command.
 
-If you wish to adjust the range of the speeds available through the pot, find _initial_pot_wpm_low_value_ and _initial_pot_wpm_high_value_ in [keyer_settings.h](https://github.com/k3ng/k3ng_cw_keyer/blob/master/keyer_settings.h). The defaults are a low of 13 and a high of 35. If you find you speed is bouncing between values, you may want to reduce the difference between the high and low. Also note, the highest you can go will be on less than the value of the _initial_pot_wpm_high_value_ variable.
+If you wish to adjust the range of the speeds available through the pot, find _initial_pot_wpm_low_value_ and _initial_pot_wpm_high_value_ in [keyer_settings.h](https://github.com/k3ng/k3ng_cw_keyer/blob/master/k3ng_keyer/keyer_settings.h). The defaults are a low of 13 and a high of 35. If you find you speed is bouncing between values, you may want to reduce the difference between the high and low. Also note, the highest you can go will be on less than the value of the _initial_pot_wpm_high_value_ variable.
 
     #define initial_pot_wpm_low_value 13     // Potentiometer WPM fully CCW
     #define initial_pot_wpm_high_value 35    // Potentiometer WPM fully CW
