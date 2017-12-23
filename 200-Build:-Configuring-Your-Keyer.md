@@ -4,7 +4,7 @@ The configuration options and various other settings are broken out into separat
 
 > **[keyer_features_and_options.h](https://github.com/k3ng/k3ng_cw_keyer/blob/master/keyer_features_and_options.h)**: configure the features you want here. A list of features, options and their descriptions can be found in the [Features and Options](https://github.com/k3ng/k3ng_cw_keyer/wiki/Features-and-Options) page.
 
-> **[keyer_pin_settings.h](https://github.com/k3ng/k3ng_cw_keyer/blob/master/keyer_pin_settings.h)**: map the pins you’re using with your hardware
+> **[keyer_pin_settings.h](https://github.com/k3ng/k3ng_cw_keyer/blob/master/k3ng_keyer/keyer_pin_settings.h)**: map the pins you’re using with your hardware
 
 > **[keyer_settings.h](https://github.com/k3ng/k3ng_cw_keyer/blob/master/keyer_settings.h)**: various settings for features; you probably won’t need to touch this unless you’re a power user or want to tweak stuff
 
