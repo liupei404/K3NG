@@ -2,7 +2,7 @@
 
 The configuration options and various other settings are broken out into separate files. You will mostly be working with key_feature_and_options.h until you start deciding to use different pins than the schematics plan for or modify the way the keyer works.
 
-> **[keyer_features_and_options.h](https://github.com/k3ng/k3ng_cw_keyer/blob/master/k3ng_keyer/keyer_features_and_options.h)**: configure the features you want here. A list of features, options and their descriptions can be found in the [Features and Options](https://github.com/k3ng/k3ng_cw_keyer/wiki/Features-and-Options) page.
+> **[keyer_features_and_options.h](https://github.com/k3ng/k3ng_cw_keyer/blob/master/k3ng_keyer/keyer_features_and_options.h)**: configure the features you want here. A list of features, options and their descriptions can be found in the [Features and Options](https://github.com/k3ng/k3ng_cw_keyer/wiki/900-Features-and-Options) page.
 
 > **[keyer_pin_settings.h](https://github.com/k3ng/k3ng_cw_keyer/blob/master/k3ng_keyer/keyer_pin_settings.h)**: map the pins you’re using with your hardware
 
