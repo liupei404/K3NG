@@ -26,7 +26,7 @@ This document is in process. Feel free to help by copying appropriate contents a
 |[FEATURE_LCD_ADAFRUIT_BACKPACK](https://github.com/k3ng/k3ng_cw_keyer/wiki/Feature:-Display) | keyer_features_and_options.h | Adafruit I2C LCD Backup using MCP23008
 |[FEATURE_LCD_YDv1](https://github.com/k3ng/k3ng_cw_keyer/wiki/Feature:-Display) | keyer_features_and_options.h | YourDuino I2C LCD display with old LCM 1602 V1 ic
 |[FEATURE_LCD1602_N07DH](https://github.com/k3ng/k3ng_cw_keyer/wiki/Feature:-Display) | keyer_features_and_options.h | http://linksprite.com/wiki/index.php5?title=16_X_2_LCD_Keypad_Shield_for_Arduino
-|FEATURE_CW_DECODER | keyer_features_and_options.h | Decode CW into the keyer
+|[FEATURE_CW_DECODER](https://github.com/k3ng/k3ng_cw_keyer/wiki/385-Feature:-CW-Decoder) | keyer_features_and_options.h | Decode CW into the keyer
 |FEATURE_SLEEP | keyer_features_and_options.h | go to sleep after x minutes to conserve battery power (not compatible with Arduino DUE, may have mixed results with Mega and Mega ADK)
 |FEATURE_ROTARY_ENCODER | keyer_features_and_options.h | Use a rotary encoder for speed control
 |FEATURE_CMOS_SUPER_KEYER_IAMBIC_B_TIMING | keyer_features_and_options.h | 
