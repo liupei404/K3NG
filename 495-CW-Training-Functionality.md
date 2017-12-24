@@ -1,14 +1,18 @@
 # Introduction
 
-The K3NG Arduino keyer has a training module which currently supports these training modes:
+The K3NG Arduino keyer has CW training capabilities.  Currently, the following training methods are implemented:
 
-Callsigns
+Alphabet Sending - Command Mode
 
-Random Groups
+Callsigns - Command Line Interface
 
-Wordsworth
+Random Groups - Command Line Interface
+ 
+Wordsworth - Command Line Interface
 
-There are plans to add interactive contest exchange training.  Currently the training functionality is command line interface (CLI) based, however there are plans to make several of the modes that don't require the serial interface/CLI available in command mode.
+There are plans to add interactive contest exchange training. 
+
+# Command Line Interface Training
 
 To enable the command line based training, uncomment this line in you features file:
 
@@ -73,3 +77,11 @@ The default language for the Wordworth practice is English, however multi-langua
     #define OPTION_WORDSWORTH_CZECH
     #define OPTION_WORDSWORTH_NORSK
     #define OPTION_WORDSWORTH_DEUTSCH
+
+# Command Mode Training
+
+Currently Alphabet sending practice is implemented in Command Mode.  To compile it, uncomment:
+
+#define FEATURE_ALPHABET_SEND_PRACTICE
+
+Use the S command in command mode to access the alphabet sending practice mode.
