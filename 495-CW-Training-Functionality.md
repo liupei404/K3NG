@@ -3,17 +3,17 @@
 The following training methods are currently implemented in the Command Line Interface
 
 
-> Callsign Receive Practice
+Callsign Receive Practice
 
-> Keyboard Interactive Callsign Receive Practice
+Keyboard Interactive Callsign Receive Practice
 
-> Random Groups Receive Practice
+Random Groups Receive Practice
 
-> Wordsworth Receive Practice
+Wordsworth Receive Practice
 
-> Receive / Transmit Echo Practice
+Receive / Transmit Echo Practice
  
-To enable the command line based training, uncomment this line in you features file:
+To enable the command line based training, uncomment this line in your features file:
 
     #define FEATURE_TRAINING_COMMAND_LINE_INTERFACE
 
@@ -29,7 +29,7 @@ To access the CW training module, in the command line interface execute the \K c
 
     X - Exit
 
-# Callsigns
+## Callsigns
 
     Callsign Practice Menu
 
@@ -40,7 +40,7 @@ To access the CW training module, in the command line interface execute the \K c
 
     X - Exit
 
-# Random Groups
+## Random Groups
 
     Random Code Menu
 
@@ -50,7 +50,7 @@ To access the CW training module, in the command line interface execute the \K c
 
     X - Exit
 
-# Wordsworth
+## Wordsworth
 
 The Wordsworth method was created by George Allison, K1IG, and was described in the May 2017 issue of QST.  Andy Stewart, KB1OIQ, wrote code that was used to create the English word list used by this feature.  Wordsworth is like Farnsworth but instead of using increased letter spacing, Wordsworth uses increased word spacing.  The idea is to learn to head copy words and recognize the entire word as one unit rather than copying individual letters and assembling them into a word, much like we all do with spoken language.
 
@@ -79,7 +79,7 @@ The default language for the Wordworth practice is English, however multi-langua
     #define OPTION_WORDSWORTH_DEUTSCH
 
 
-# Receive / Transmit Echo Practice
+## Receive / Transmit Echo Practice
 
     Receive / Transmit Echo Practice Menu
 
@@ -98,10 +98,14 @@ The default language for the Wordworth practice is English, however multi-langua
     X - Exit
 
 
+In Receive / Transmit Echo Practice, the keyer will send you text and you need to send it back correctly.  If you send correctly, the keyer will beep and send the next text.  If you make a mistake, the keyer will give a boop and resend the text to you.
+
+The Progressive mode will start with one character and each time you send a correct response it will add another character to the string until you reach five characters.
+
 # Command Mode Training
 
 Currently Alphabet sending practice is implemented in Command Mode.  To compile it, uncomment:
 
 #define FEATURE_ALPHABET_SEND_PRACTICE
 
-Use the S command in command mode to access the alphabet sending practice mode.
+In Command Mode, send an S to enter Alphabet Send Practice.  You'll hear a beep.  You should then send the alphabet (A, B, C...).  The keyer will send a beep for each correct letter, and a boop for each time you make a mistake.  Press the command mode to exit this mode.
