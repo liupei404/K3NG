@@ -3,9 +3,9 @@
 The following training methods are currently implemented in the Command Line Interface
 
 
-Callsign Receive Practice
+Receive Practice
 
-Keyboard Interactive Callsign Receive Practice
+Keyboard Interactive Receive Practice
 
 Random Groups Receive Practice
 
@@ -21,22 +21,32 @@ To access the CW training module, in the command line interface execute the \K c
 
     CW Training Menu
 
-    C - Callsign Receive Practice
-    I - Keyboard Interactive Callsign Receive Practice
+    C - Receive Practice
+    I - Keyboard Interactive Receive Practice
     R - Random Groups Receive Practice
     W - Wordsworth Receive Practice
     E - Receive / Transmit Echo Practice
 
     X - Exit
 
-## Callsigns
+Receive Practice sends code without any interruption.  The Keyboard Interactive Receive Practice sends code that then waits for you to enter using the CLI keyboard what was sent.  Random Groups Receive Practice sends various letter and number five character groups.  Wordsworth is described in more detail below.
 
-    Callsign Practice Menu
+## Receive and Keyboard Interactive Receive Practice
+
+
+
+    Menu
 
     I - International Callsigns
     U - US Callsigns
     E - European Callsigns
     C - Canadian Callsigns
+    2 - Two Letter Words
+    3 - Three Letter Words
+    4 - Four Letter Words
+    N - Names
+    Q - QSO Words
+    M - Mixed Words   
 
     X - Exit
 
@@ -104,8 +114,18 @@ The Progressive mode will start with one character and each time you send a corr
 
 # Command Mode Training
 
-Currently Alphabet sending practice is implemented in Command Mode.  To compile it, uncomment:
+## Alphabet Send Practice 
 
-#define FEATURE_ALPHABET_SEND_PRACTICE
+Command: S
 
-In Command Mode, send an S to enter Alphabet Send Practice.  You'll hear a beep.  You should then send the alphabet (A, B, C...).  The keyer will send a beep for each correct letter, and a boop for each time you make a mistake.  Press the command mode to exit this mode.
+Compilation: #define FEATURE_ALPHABET_SEND_PRACTICE
+
+Upon entering Alphabet Send Practice mode you will hear a beep.  You should then send the alphabet (A, B, C...).  The keyer will send a beep for each correct letter, and a boop for each time you make a mistake.  Press the command mode to exit this mode.
+
+## Send / Receive Echo Practice - Progressive Five Character Groups
+
+Command: U
+
+Compilation: #define FEATURE_COMMAND_MODE_PROGRESSIVE_5_CHAR_ECHO_PRACTICE
+
+Upon entering this mode the keyer will send ECHO in CW.  The Progressive mode will start with one character and each time you send a correct response it will add another character to the string until you reach five characters.  If you make a mistake, the keyer will repeat the current CW string.  Press the command mode to exit this mode.
