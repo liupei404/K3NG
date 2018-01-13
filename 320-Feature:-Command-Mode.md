@@ -21,6 +21,7 @@ To _exit_ command mode, send X in CW using the paddles or just press the command
 * P# - Program a memory (See options section below)
 * S - Alphabet Send Practice
 * T - Tune mode
+* U - Receive / Send Echo Practice
 * V - Toggle potentiometer active / inactive
 * W - Change speed
 * X - Exit command mode (you can also press the command button (button0) to exit)
