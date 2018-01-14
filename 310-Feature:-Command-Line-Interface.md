@@ -13,6 +13,7 @@ Commands are preceded with a backslash (” \ “), the key above your Enter key
 ### CLI Commands:
 
     \? Help
+    \/ Paged Help
     \# Play memory #
     \a Iambic A mode
     \b Iambic B mode
