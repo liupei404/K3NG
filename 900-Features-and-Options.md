@@ -6,7 +6,7 @@ This document is in process. Feel free to help by copying appropriate contents a
 | ---- |:----:|:---------------|
 |[FEATURE_COMMAND_BUTTONS](https://github.com/k3ng/k3ng_cw_keyer/wiki/300-Feature:-Command-Buttons) | keyer_features_and_options.h | Enable command buttons 
 |[FEATURE_COMMAND_LINE_INTERFACE](https://github.com/k3ng/k3ng_cw_keyer/wiki/310-Feature:-Command-Line-Interface) | keyer_features_and_options.h | Enable command line interface over serial connection
-|[FEATURE_MEMORIES](https://github.com/k3ng/k3ng_cw_keyer/wiki/Feature:-Memory) | keyer_features_and_options.h | on the Arduino Due, you must have FEATURE_EEPROM_E24C1024 and E24C1024 EEPROM hardware in order to compile this
+|[FEATURE_MEMORIES](https://github.com/k3ng/k3ng_cw_keyer/wiki/350-Feature:-Memory) | keyer_features_and_options.h | on the Arduino Due, you must have FEATURE_EEPROM_E24C1024 and E24C1024 EEPROM hardware in order to compile this
 |[FEATURE_MEMORY_MACROS](https://github.com/k3ng/k3ng_cw_keyer/wiki/Feature:-Memory) | keyer_features_and_options.h | 
 |[FEATURE_WINKEY_EMULATION](https://github.com/k3ng/k3ng_cw_keyer/wiki/Feature:-Winkey) | keyer_features_and_options.h | 
 |FEATURE_BEACON | keyer_features_and_options.h | 
