@@ -79,7 +79,7 @@ Also check out [KF4BZT's article](https://kf4bzt.wordpress.com/2015/08/06/arduin
 
 Jmatonis has published on [Thingiverse a 3D model of his keyer enclosure](https://www.thingiverse.com/thing:2399311).
 
-
+Cees, PA3CVI, has published an [excellent Dutch manual](https://github.com/k3ng/k3ng_cw_keyer/files/1662287/Arduino.Handleiding.K3NG_CW_Keyer.pdf) .
 
 ### CW Dah to Dit Ratio Adjust
 
