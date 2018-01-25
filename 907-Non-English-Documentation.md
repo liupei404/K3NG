@@ -1,0 +1,1 @@
+[Dutch manual by Cees, PA3CVI](https://github.com/k3ng/k3ng_cw_keyer/files/1662287/Arduino.Handleiding.K3NG_CW_Keyer.pdf)
