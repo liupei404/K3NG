@@ -19,4 +19,4 @@ Marc-Andre, VE2EVN, created this schematic for his keyer build using an Arduino 
 
 These [detailed building plans by KF4BZT](https://kf4bzt.wordpress.com/2015/08/06/arduino-cw-keyer-project/) may be helpful to people new to building this sort of projct.
 
-This [Fritzing Breadboard Plan](http://fritzing.org/media/fritzing-repo/projects/k/k3ng-project/images/K3NG%20keyer_bb.png) may also help in breadboarding your first prototype.
+This [Fritzing Breadboard Plan](http://fritzing.org/media/fritzing-repo/projects/k/k3ng-project/images/K3NG%20keyer_bb.png) may also help in breadboarding your first prototype.  (User contributed)  (Note that this model uses D3 and D5 for the paddles instead of the standard D2 and D5 pins.)
