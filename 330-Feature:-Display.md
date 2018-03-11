@@ -6,10 +6,12 @@ To configure the LCD display, follow these steps:
 
 _First_, Uncomment only one of the lines below in keyer_features_and_options.h.kThe appropriate line will depend on your display type:
 
-    #define FEATURE_LCD_4BIT
-    #define FEATURE_LCD_ADAFRUIT_I2C
-    #define FEATURE_LCD_YDv1
-    #define FEATURE_LCD1602_N07DH
+    #define FEATURE_LCD_4BIT                // classic LCD display using 4 I/O lines
+    #define FEATURE_LCD_ADAFRUIT_I2C          // Adafruit I2C LCD display using MCP23017 at addr 0x20
+    #define FEATURE_LCD_ADAFRUIT_BACKPACK    // Adafruit I2C LCD Backup using MCP23008 (courtesy Josiah Ritchie, KE0BLL)
+    #define FEATURE_LCD_YDv1                // YourDuino I2C LCD display with old LCM 1602 V1 ic
+    #define FEATURE_LCD1602_N07DH      // http://linksprite.com/wiki/index.php5?title=16_X_2_LCD_Keypad_Shield_for_Arduino
+    #define FEATURE_LCD_SAINSMART_I2C
 
 _Second_, If you are using the 4 bit LCD display, setup the I/O pins you want to use:
 
@@ -42,6 +44,6 @@ increasing the I2C bus speed in file twi.h (it will be in ….\arduino-1.0.1\lib
 
 To change the character that is used to indicate unknown characters in paddle echo, customize this line:
 
-   #define unknown_cw_character ‘*’
+    #define unknown_cw_character ‘*’
 
 (If you want to hear a sound when an unknown character is sent, enable OPTION_UNKNOWN_CHARACTER_ERROR_TONE)
