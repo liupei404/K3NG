@@ -8,7 +8,7 @@ The keyer offers five sequencer outputs, in addition to the [PTT lines](https://
 
 ## Theory of Operation
 
-This admittedly rudimentary ASCII art timing diagram explains the timing relationship of the PTT, sequencer, and TX key lines, or at least a typical use case.
+This admittedly rudimentary ASCII art timing diagram explains the timing relationship of the PTT, sequencer, and TX key lines, in a typical use case.
 
             +----------------------------+
             |                            |
@@ -37,7 +37,6 @@ This admittedly rudimentary ASCII art timing diagram explains the timing relatio
                        +-----------------+
                        |                 |
     seq5---------------+                 +--------------------------
-
 
 
 
@@ -111,6 +110,19 @@ The output of the timing command looks like this:
 
 This example setup is just an example and naturally you will need to adjust based on your equipment and requirements, however the setup above will yield timing like what is shown in the Theory of Operation section above.  For smooth operation, it's recommended that the PTT Tail Time exceed the longest PTT inactive to Sequencer inactive time.  Times of 0 to 255 mS can be configured.
 
+## PTT Input
+
+A PTT input pin can be configured to initiate PTT and the Sequencer sequence independent of CW keying.
+
+
+    #define ptt_input_pin 0
+
+The logic active and inactive states can be changed in the settings file:
+
+    #define ptt_input_pin_active_state LOW
+    #define ptt_input_pin_inactive_state HIGH
+
+This pin is held high with an AVR internal pullup.  Taking the pin to its active state (LOW by default) will cause the active transmitter PTT line to go active (HIGH by default), and the sequencer pins to go active, according to configured delay times.
 
 ## Disclaimer
 
