@@ -111,6 +111,29 @@ The output of the timing command looks like this:
 
 This example setup is just an example and naturally you will need to adjust based on your equipment and requirements, however the setup above will yield timing like what is shown in the Theory of Operation section above.  For smooth operation, it's recommended that the PTT Tail Time exceed the longest PTT inactive to Sequencer inactive time.  Times of 0 to 255 mS can be configured.
 
+Here's more detail on the timing settings:
+
+            |<--ptt lead time-->|        |<--ptt tail time-->|
+
+
+            +------------------------------------------------+                            active
+            |                                                |
+    ptt ----+                                                +--------------------------- inactive
+
+                                 +------+                                                 active
+                                 |      |
+    tx_key-----------------------+      +------------------------------------------------ inactive
+
+                 ptt active                                       ptt inactive
+             |<-to seq active->|                              |<-to seq inactive->|
+                    time                                              time
+             
+                               +--------------------------------------------------+       active
+                               |                                                  |
+    sequencer------------------+                                                  +------ inactive
+
+
+
 If you have a significant amount of PTT lead time and/or PTT active to Sequencer active time, and you're doing hand keying (i.e. sending with the paddle), you may want to implement a foot switch with the PTT Input functionality described below.  The initial sequencer delay may affect operators using paddle sending if they are not accustomed to the delay and adjust sending accordingly.
 
 ## PTT Input
