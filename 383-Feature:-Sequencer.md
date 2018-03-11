@@ -109,6 +109,8 @@ The output of the \:timing command looks like this:
     pa <#> <mS>             Set PTT active to Sequencer active time
     pi <#> <mS>             Set PTT inactive to Sequencer inactive time
 
+This example setup is just an example and naturally you will need to adjust based on your equipment and requirements, however the setup above will yield timing like what is shown in the Theory of Operation section above.  For smooth operation, it's recommended that the PTT Tail Time exceed the longest PTT inactive to Sequencer inactive time.  Times of 0 to 255 mS can be configured.
+
 
 ## Disclaimer
 
