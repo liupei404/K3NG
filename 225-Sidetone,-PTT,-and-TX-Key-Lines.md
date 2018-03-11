@@ -83,7 +83,7 @@ The logic active and inactive states can be changed in the settings file:
     #define ptt_input_pin_active_state LOW
     #define ptt_input_pin_inactive_state HIGH
 
-The PTT input line also triggers the optional TX/RX Sequencer functionality.
+The PTT input line also triggers the optional TX/RX [Sequencer] (https://github.com/k3ng/k3ng_cw_keyer/wiki/383-Feature:-Sequencer) functionality.
 
 ### Multi-Transmitter Capability
 
@@ -104,4 +104,9 @@ This keyer supports multiple transmitters that can be selected using the \x CLI 
     #define ptt_tx_6 0
 
 Setting a line to zero disables it.  At the very least you need one TX Key line defined.  Obviously, with the Arduino Uno, pins are at a premium and each features uses pins.  Larger Arduino platforms like the Mega offer more pins and more compiled-in functionality due to the larger memory space.
+
+The active and inactive states of the TX lines can be changed in your settings file with these lines:
+
+    #define tx_key_line_active_state HIGH
+    #define tx_key_line_inactive_state LOW
 
