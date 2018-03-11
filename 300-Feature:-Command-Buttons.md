@@ -28,7 +28,7 @@ analog_buttons_r1 is the value of R7 in the schematic in K (kilo ohms), and anal
 
 DFRobot LCD display buttons can be used be activating the following option in your features file:
 
-  #define OPTION_DFROBOT_LCD_COMMAND_BUTTONS
+    #define OPTION_DFROBOT_LCD_COMMAND_BUTTONS
 
 Button mappings and analog reading settings are in your settings file:
 
