@@ -10,9 +10,13 @@ The keyer offers five sequencer outputs, in addition to the [PTT lines](https://
 
 This admittedly rudimentary ASCII art timing diagram explains the timing relationship of the PTT, sequencer, and TX key lines, or at least a typical use case.
 
-            +------------------------------------+
-            |                                    |
-    ptt ----+                                    +------------------
+            +----------------------------+
+            |                            |
+    ptt ----+                            +------------------
+
+                         +-------------+
+                         |             |
+    tx_key---------------+             +----------------------------
 
               +--------------------------------+
               |                                |
@@ -34,9 +38,7 @@ This admittedly rudimentary ASCII art timing diagram explains the timing relatio
                        |                 |
     seq5---------------+                 +--------------------------
 
-                         +-------------+
-                         |             |
-    tx_key---------------+             +----------------------------
+
 
 
 ## Compile Time Configuration
