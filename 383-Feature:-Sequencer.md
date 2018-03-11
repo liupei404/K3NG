@@ -70,6 +70,44 @@ It's highly recommended to use an Arduino Mega or equivalent.  The sequencer out
 
 ## Run Time Configuration
 
+Both PTT and Sequencer line timing can be configured at run time using extended commands:
+
+    \:pl <tx_number> <time_in_mS> - set PTT lead time
+    \:pt <tx_number> <time_in_mS> - set PTT tail time
+    \:pa <sequencer_number> <time_in_mS> - PTT active to sequencer active time
+    \:pi <sequencer_number> <time_in_mS> - PTT inactive to sequencer inactive time
+    \:timing - show all current timing settings
+
+The output of the \:timing command looks like this:
+
+    \:timing
+    Timings (mS)
+
+    PTT
+    TX      Lead    Tail
+    --      ----    ----
+    1       0       100
+    2       0       0
+    3       0       0
+    4       0       0
+    5       0       0
+    6       0       0
+
+    Sequencer
+    #       PTT Active to Sequencer Active  PTT Inactive to Sequencer Inactive
+    -       ------------------------------  ----------------------------------
+    1                       25                              5
+    2                       20                              10
+    3                       15                              15
+    4                       10                              20
+    5                       5                               25
+
+    Command Hints
+
+    pl <transmitter> <mS>   Set PTT lead time
+    pt <transmitter> <mS>   Set PTT tail time
+    pa <#> <mS>             Set PTT active to Sequencer active time
+    pi <#> <mS>             Set PTT inactive to Sequencer inactive time
 
 
 ## Disclaimer
