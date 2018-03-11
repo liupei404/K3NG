@@ -96,11 +96,11 @@ The output of the timing command looks like this:
     Sequencer
     #       PTT Active to Sequencer Active  PTT Inactive to Sequencer Inactive
     -       ------------------------------  ----------------------------------
-    1                       25                              5
-    2                       20                              10
+    1                       5                               25
+    2                       10                              20
     3                       15                              15
-    4                       10                              20
-    5                       5                               25
+    4                       20                              10
+    5                       25                              5
 
     Command Hints
 
