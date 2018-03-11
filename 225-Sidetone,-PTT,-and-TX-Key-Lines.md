@@ -72,7 +72,18 @@ Timing Command Output
     5       0       10
     6       0       10
 
+If you do not have extended commands, the PTT lead and tail times are taken from the settings in the setting file and are written to EEPROM at first boot up.  If you need to change the timings, edit the settings file, recompile, and do a "factory reset" at boot up (squeeze both paddles and reset).
 
+There is a PTT input line which manually activates PTT independent of CW keying.  This pin is defined in the pins file:
+
+    #define ptt_input_pin 0
+
+The logic active and inactive states can be changed in the settings file:
+
+    #define ptt_input_pin_active_state LOW
+    #define ptt_input_pin_inactive_state HIGH
+
+The PTT input line also triggers the optional TX/RX Sequencer functionality.
 
 ### Multi-Transmitter Capability
 
