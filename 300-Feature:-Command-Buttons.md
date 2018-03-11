@@ -22,9 +22,9 @@ Two other settings are used to define the voltage divider resitor values:
 
 analog_buttons_r1 is the value of R7 in the schematic in K (kilo ohms), and analog_buttons_r2 is the value of the remaining resistors (R8, R9, R10, R11, R12, etc.) The code calculates the voltage values for each button at runtime based on the three settings above.  If you decide to use other resistor values you can adjust these values in the code, just be sure to do the math and make sure the resistors you chose make reasonable voltages and currents.
 
-#Alternate Hardware
+# Alternate Hardware
 
-##DFRobot LCD Display Buttons
+## DFRobot LCD Display Buttons
 
 DFRobot LCD display buttons can be used be activating the following option in your features file:
 
