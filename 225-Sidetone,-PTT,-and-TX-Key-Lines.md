@@ -31,8 +31,6 @@ PTT tail time is invoked when sending code automatically, such as via a memory p
 
 Note that if you activate PTT lead time, you should activate tail time as well, otherwise PTT lead time will be invoked before each dit or dah, significantly slowing down the sending speed.
 
-Currently PTT lead, tail, and hang times can only be changed at runtime using the Winkey interface emulation.  (Let me know if you would like CLI commands to do this.)
-
 For testing purposes the PTT line can be manually toggled on and off using the \u CLI command.
 
 If your CW transmitter keys up when the CW line is keyed (or you are not going to use multi-transmitter support), there is probably no need to use the PTT line.
@@ -47,6 +45,33 @@ PTT and TX key lines can be inhibited with the FEATURE_PTT_INTERLOCK function.  
     #define ptt_interlock 0
 
 When the input is taken high, the PTT and TX key lines will not go active.
+
+The active and inactive states of the PTT lines can be changed in your settings file with these lines:
+
+    #define ptt_line_active_state HIGH
+    #define ptt_line_inactive_state LOW
+
+Starting in version 2018.03.11.01, PTT lead and tail times are stored in EEPROM and can be changed at runtime using extended commands.  (Extended commands are available if OPTION_EXCLUDE_MILL_MODE is not defined.  These commands are not available with the NanoKeyer, or Nano or Uno based keyers).
+
+    \:pl <tx_number> <time_in_mS> - set PTT lead time
+    \:pt <tx_number> <time_in_mS> - set PTT tail time
+    \:timing - show all current timing settings
+
+Timing Command Output
+
+    \:timing
+    Timings (mS)
+    
+    PTT
+    TX      Lead    Tail
+    --      ----    ----
+    1       0       100
+    2       0       10
+    3       0       10
+    4       0       10
+    5       0       10
+    6       0       10
+
 
 
 ### Multi-Transmitter Capability
