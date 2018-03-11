@@ -78,7 +78,7 @@ Both PTT and Sequencer line timing can be configured at run time using extended 
     \:pi <sequencer_number> <time_in_mS> - PTT inactive to sequencer inactive time
     \:timing - show all current timing settings
 
-The output of the \:timing command looks like this:
+The output of the timing command looks like this:
 
     \:timing
     Timings (mS)
