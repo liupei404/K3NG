@@ -4,7 +4,7 @@ This keyer supports an LCD display, either the standard commonplace Hitachi LCD 
 
 To configure the LCD display, follow these steps:
 
-_First_, Uncomment only one of the lines below in keyer_features_and_options.h.kThe appropriate line will depend on your display type:
+_First_, Uncomment only one of the lines below in features files (typically keyer_features_and_options.h).  The appropriate line will depend on your display type:
 
     #define FEATURE_LCD_4BIT                // classic LCD display using 4 I/O lines
     #define FEATURE_LCD_ADAFRUIT_I2C          // Adafruit I2C LCD display using MCP23017 at addr 0x20
@@ -12,6 +12,7 @@ _First_, Uncomment only one of the lines below in keyer_features_and_options.h.k
     #define FEATURE_LCD_YDv1                // YourDuino I2C LCD display with old LCM 1602 V1 ic
     #define FEATURE_LCD1602_N07DH      // http://linksprite.com/wiki/index.php5?title=16_X_2_LCD_Keypad_Shield_for_Arduino
     #define FEATURE_LCD_SAINSMART_I2C
+    #define FEATURE_LCD_FABO_PCF8574
 
 _Second_, If you are using the 4 bit LCD display, setup the I/O pins you want to use:
 
