@@ -22,6 +22,10 @@ Two other settings are used to define the voltage divider resitor values:
 
 analog_buttons_r1 is the value of R7 in the schematic in K (kilo ohms), and analog_buttons_r2 is the value of the remaining resistors (R8, R9, R10, R11, R12, etc.) The code calculates the voltage values for each button at runtime based on the three settings above.  If you decide to use other resistor values you can adjust these values in the code, just be sure to do the math and make sure the resistors you chose make reasonable voltages and currents.
 
+## Warning
+
+Do not enable FEATURE_BUTTONS unless you have the corresponding resistors on the button pin connected.  If the analog button pin does not have +5 volts on it, the keyer will not start up as it thinks there is a button depression in progress.
+
 ## Alternate Hardware
 
 ### DFRobot LCD Display Buttons
