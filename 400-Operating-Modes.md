@@ -36,3 +36,7 @@ And the default timing setting can be set in keyer_settings.h:
     #define default_cmos_super_keyer_iambic_b_timing_percent 33
 
 CMOS Super Keyer Timing applies only to Iambic B mode.  Setting the timing percent to 0 (zero) is essentially pure Iambic B and 100 is pure Iambic A.  This function can be turned on and off at runtime using the command line interface \& command, and the timing percentage can be set using the \% command.  Settings for this are stored in nonvolatile memory.
+
+### Paddle Reverse
+
+The command mode N command switches the left and right paddles.  The equivalent function in the CLI is \n and using the PS2 or USB keyboard it’s CTRL-N.
