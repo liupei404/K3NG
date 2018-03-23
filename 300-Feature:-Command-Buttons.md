@@ -57,3 +57,9 @@ Button mappings and analog reading settings are in your settings file:
     #define dfrobot_btnLEFT   4
     #define dfrobot_btnSELECT 0
     #define dfrobot_btnNONE   255 // do not change
+
+### Command Mode Active LED
+
+If you would like to have an LED activate when in command mode, define this pin and have it power an LED:
+
+    #define command_mode_active_led 0
