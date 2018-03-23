@@ -116,3 +116,7 @@ If you need separate pins to indicate dits and dah, the pins can be defined here
 
     #define tx_key_dit 0
     #define tx_key_dah 0
+
+### TX Disable / Enable
+
+The transmit line can be disabled and enabled using the \i CLI command or I command in command mode.  The equivalent PS2 keyboard command is CTRL-I.  This feature can be used for sending practice without keying the transmitter.
