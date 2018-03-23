@@ -110,3 +110,9 @@ The active and inactive states of the TX lines can be changed in your settings f
     #define tx_key_line_active_state HIGH
     #define tx_key_line_inactive_state LOW
 
+### Dit and Dah Pins
+
+If you need separate pins to indicate dits and dah, the pins can be defined here:
+
+    #define tx_key_dit 0
+    #define tx_key_dah 0
