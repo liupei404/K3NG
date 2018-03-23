@@ -1,3 +1,8 @@
+### CW Dah to Dit Ratio Adjust
+
+The CW dash length to dot length ratio can be adjusted using the J command in command mode.  Upon entering the J command you will hear a repeating dit dah.  Use the left and right paddles to shorten or lengthen the dah.  Squeeze both paddles to exit the weight adjust command.  After that you can enter X or press the command button to exit command mode.
+
+The ratio can also be adjusted in the command line interface using the \j command.  \j300 sets the keyer for a normal 3:1 ratio, \j250 would set it for a 2.5:1 ratio, for example.
 
 ### Autospace
 
