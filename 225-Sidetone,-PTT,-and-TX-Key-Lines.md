@@ -4,6 +4,10 @@ The sidetone line normally outputs square wave sidetone for driving a speaker.  
 
 The sidetone frequency can be adjusted using the F command in command mode.
 
+If you wish to have a logic high / low level to key an external sidetone oscillator rather than a square wave output, uncomment this line in your features file:
+
+    #define OPTION_SIDETONE_DIGITAL_OUTPUT_NO_SQUARE_WAVE
+
 ### PTT (“Push To Talk”)
 
 The PTT pins go high whenever code is sent.  If it’s desired to have the PTT line go high before code is sent or stay high for a period of time after code stops being sent, these lines can be adjusted in keyer_settings.h:
@@ -120,3 +124,21 @@ If you need separate pins to indicate dits and dah, the pins can be defined here
 ### TX Disable / Enable
 
 The transmit line can be disabled and enabled using the \i CLI command or I command in command mode.  The equivalent PS2 keyboard command is CTRL-I.  This feature can be used for sending practice without keying the transmitter.
+
+### PTT Interlock
+
+For multi-transmitter operation in contests where only one station at a time is allowed to transmit, there is a PTT Interlock feature.
+
+Enable this in your features file:
+
+    #define FEATURE_PTT_INTERLOCK
+
+Configure a pin in your pins file:
+
+    #define ptt_interlock 0 
+
+If desired, set this parameter in our settings file:
+
+    #define ptt_interlock_active_state HIGH
+
+When the ptt_interlock pin is taken to the active state, the keyer will not activate PTT.
