@@ -1,8 +1,8 @@
 ### Sidetone Line
 
-The sidetone line normally outputs square wave sidetone for driving a speaker.  Sidetone can be disabled on transmit using the command mode O command.  This is for transmitters that generate their own sidetone.
+The sidetone line normally outputs square wave sidetone for driving a speaker.  Sidetone can be disabled on transmit using the command mode O command, the \O command line interface (CLI) command, or CTRL-O on a PS2/USB keyboard.  This function is for transmitters that generate their own sidetone.
 
-The sidetone frequency can be adjusted using the F command in command mode.
+The sidetone frequency can be adjusted using the F command in command mode or the \F CLI command.
 
 If you wish to have a logic high / low level to key an external sidetone oscillator rather than a square wave output, uncomment this line in your features file:
 
