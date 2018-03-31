@@ -142,3 +142,21 @@ If desired, set this parameter in our settings file:
     #define ptt_interlock_active_state HIGH
 
 When the ptt_interlock pin is taken to the active state, the keyer will not activate PTT.
+
+### TX Inhibit and Pause
+
+The keyer has two pins that can be interfaced with contest station interlock controllers (like [this one](https://github.com/k3ng/k3ng_station_interlock) ) to control transmitting.
+
+The tx_inhibit_pin, when taken active, will cause the keyer to stop transmitting and dump any buffered characters.  The tx_pause_pin, when taken active, will also cause the keyer to stop transmitting but will preserve any buffered characters and resume sending them after the tx_pause_pin is taken inactive.
+
+The pins are defined in your pins file:
+
+    #define tx_inhibit_pin 0
+    #define tx_pause_pin 0
+
+...and the active and inactive states are defined in your settings file:
+
+    #define tx_inhibit_pin_active_state LOW
+    #define tx_inhibit_pin_inactive_state HIGH
+    #define tx_pause_pin_active_state LOW
+    #define tx_pause_pin_inactive_state HIGH 
