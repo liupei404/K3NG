@@ -16,9 +16,9 @@ With the K1EL Winkey interface protocol emulation feature enabled, if you hold d
 
 You may need to disable some features to get both the CLI and K1EL Winkey interface protocol emulation features to fit into an Arduino Uno.  Other larger Arduino variants like the Mega can hold all of the features and options.
 
-In K1EL Winkey interface protocol emulation mode the USB port will be set for 1200 baud.  The emulation is a 99.9% complete emulation, and it should work with most programs that support K1EL Winkey interfacing.  Many contest and logging programs  have been tested and work with all features me and others have tried.  (Win-Test works only with the keyer in Winkey 1 mode)
+In K1EL Winkey interface protocol emulation mode the USB port will be set for 1200 baud.  The emulation is a 99.9% complete emulation, and it should work with most programs that support K1EL Winkey interfacing.  Many contest and logging programs  have been tested and work with all features me and others have tried.  
 
-Currently the following functions are implemented:
+The following major functions are implemented and supported:
 
 * CW Sending (of course)
 * Pause
@@ -48,7 +48,7 @@ Currently the following functions are implemented:
 * Paddle Only Sidetone
 * Memory button reporting
 * Standalone Message Sending
-* K1EL Winkey 2 memory querying and setting via EEPROM upload and download is not implemented.
+
 
 The emulation functionality translates the K1EL Winkey interface protocol to native K3NG keyer functionality.  The K1EL Winkey “protocol” is a de facto standard and many programs support it, and developing an open standard protocol and getting all the major programs to support it would be a monumental undertaking.  So it made sense to merely emulate the existing protocol everyone else is talking.
 
@@ -68,16 +68,29 @@ A side effect of disabling Automatic Software Reset is that you will need to man
 
 If you attempt to use this emulation with other programs and have issues, please let me know and I’ll attempt to figure it out.  Serial port sniffer captures are very helpful in troubleshooting these issues.
 
+### N1MM / N1MM+
+
 N1MM exhibits a minor bug in the Send CW (CTRL K) window.  If you hit the Tab key, N1MM sends a 0x09 byte to the keyer which is actually the PinConfig command.  The next keystroke that is sent will be interpreted as an argument for this command and will alter the pin configuration and sidetone operation.  If you accidentally hit the Tab key and the keyer stops keying the transmitter, or the sidetone is operational is toggled, re-initialize the Winkey interface in N1MM to restore the keyer back to proper operation.  However, never fear, there is a workaround in the code for this bug.  Uncomment this line:
 
     #define OPTION_N1MM_WINKEY_TAB_BUG_WORKAROUND
 
 Note this option breaks SO2R functionality in N1MM, but if you’re only going to be using one rig it will work fine.  I offered to give the N1MM team details on the bug, however my offer was ignored.  But I digress.
 
+Unsolicited Commentary
+
 Despite any claims, the N1MM program is not open source.  If you request the source code it may be given to you and you can’t redistribute it or fork the code.  That’s called freeware and beg-for-the-source.  Not that there’s anything wrong with that, just don’t call it open source.  But I digress.  This keyer is compatible with both N1MM classic and N1MM Plus, despite my polite requests to be listed on the hardware compatibility page which have been ignored.  But I digress.  I seem to digress a lot, don’t I?
 
-If you would like to use RUMlog or RUMped activate OPTION_WINKEY_FREQUENT_STATUS_REPORT.  Both programs like to have very frequent status bytes back from the Winkey host in order to send code properly.
+### RUMlog / RUMped
 
-If you’re using Win-Test, active OPTION_WINKEY_2_HOST_CLOSE_NO_SERIAL_PORT_RESET.
+With RUMlog or RUMped activate OPTION_WINKEY_FREQUENT_STATUS_REPORT.  Both programs like to have very frequent status bytes back from the Winkey host in order to send code properly.
+
+### Win-Test
+
+When using Win-Test, be sure to uncomment: 
+
+    #define OPTION_WINKEY_2_HOST_CLOSE_NO_SERIAL_PORT_RESET
+
+
+### Iambic Master
 
 User reports indicate that this emulation works with the [Iambic Master](https://sites.google.com/site/korkowp1/iambic-master) CW training software.
