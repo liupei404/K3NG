@@ -1,12 +1,7 @@
-Mill Mode - /@ CLI Command
 
-      Extended CLI Commands
-        eepromdump
-        saveeeprom <filename>
-        loadeeprom <filename>
-        printlog
-        clearlog
-        ls <directory>
-        cat <filename>
 
-FEATURE_SD_CARD_SUPPORT
+830 SD Card Support - Needs to be completed
+
+835 Extended CLI Commands - Needs to be completed
+
+840 Mill Mode - Needs to be completed
