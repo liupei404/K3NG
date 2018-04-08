@@ -13,3 +13,7 @@ Commands
         ls <directory>
 
         cat <filename>
+
+
+
+FEATURE_SD_CARD_SUPPORT
