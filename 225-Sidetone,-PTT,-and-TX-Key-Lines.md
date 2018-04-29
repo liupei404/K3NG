@@ -160,3 +160,9 @@ The pins are defined in your pins file:
     #define tx_inhibit_pin_inactive_state HIGH
     #define tx_pause_pin_active_state LOW
     #define tx_pause_pin_inactive_state HIGH 
+
+### PTT Hold Active With Buffered Characters
+
+When activated, the keyer will hold the current PTT line active if there are characters buffered, such as when characters are typed ahead in the CLI, or if the Winkey emulation has characters buffered.  This functionality can be activated and deactivated with the \" CLI command, or with the Winkey PINCONFIG command (bit 0), which is usually implemented in logging and contest programs with a radio button labeled PTT.
+
+(Note that prior to version 2018.04.29.01 this function was optionally compiled in using OPTION_KEEP_PTT_KEYED_WHEN_CHARS_BUFFERED.  That option has been deprecated.)
