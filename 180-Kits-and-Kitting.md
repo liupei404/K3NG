@@ -22,7 +22,7 @@ The Mortty
 
 http://mortty.info/mortty/mortty-assembly/
 
-The software author can not provide direct user support for any of this hardware, however you may post questions on the [Radio Artisan](https://groups.io/g/radioartisan) group.
+The software author cannot provide direct user support for any of this hardware, however you may post questions on the [Radio Artisan](https://groups.io/g/radioartisan) group.
 
 ## Kitting
 
